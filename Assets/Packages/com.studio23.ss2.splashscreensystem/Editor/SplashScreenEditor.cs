@@ -21,7 +21,7 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
         [MenuItem("Studio-23/Splash Screen System")]
         public static void ShowWindow()
         {
-            GetWindow<SplashScreenEditor>("Custom Editor");
+            GetWindow<SplashScreenEditor>("Splash Screen System");
         }
 
         private void OnGUI()
@@ -114,6 +114,8 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
 
         private void SaveData()
         {
+            string dataFolderPath = "Assets/Resources/Splash Screen Data";
+
             // Create a folder named "Resources" if it doesn't exist
             string resourcesPath = Application.dataPath + "/Resources";
             if (!Directory.Exists(resourcesPath))
@@ -121,33 +123,70 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
                 Directory.CreateDirectory(resourcesPath);
                 AssetDatabase.Refresh();
             }
-
-            // Create a folder named "Splash Screen Data" inside "Resources" if it doesn't exist
-            string dataFolderPath = "Assets/Resources/Splash Screen Data";
             if (!AssetDatabase.IsValidFolder(dataFolderPath))
             {
                 AssetDatabase.CreateFolder("Assets/Resources", "Splash Screen Data");
                 AssetDatabase.Refresh();
             }
 
-            // Create a ScriptableObject instance and save it in the specified path
-            var customData = ScriptableObject.CreateInstance<SplashScreenData>();
-            customData.DisclaimerTitle = disclaimerTitle;
-            customData.DisclaimerDescription = disclaimerDescription;
-            customData.EulaTitle = eulaTitle;
-            customData.EulaDescription = eulaDescription;
-            customData.ThirdPartyEntries = thirdPartyEntries.ToArray();
+            // Create and save Disclaimer data
+            var disclaimerData = ScriptableObject.CreateInstance<DisclaimerData>();
+            disclaimerData.DisclaimerTitle = disclaimerTitle;
+            disclaimerData.DisclaimerDescription = disclaimerDescription;
+            string disclaimerPath = dataFolderPath + "/Disclaimer.asset";
+            AssetDatabase.CreateAsset(disclaimerData, disclaimerPath);
 
+            // Create and save EULA data
+            var EULAdata = ScriptableObject.CreateInstance<EULAData>();
+            EULAdata.EulaTitle = eulaTitle;
+            EULAdata.EulaDescription = eulaDescription;
+            string eulaPath = dataFolderPath + "/EULA.asset";
+            AssetDatabase.CreateAsset(EULAdata, eulaPath);
 
-            string path = "Assets/Resources/Splash Screen Data/Splash Screen Data.asset";
-            AssetDatabase.CreateAsset(customData, path);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-            EditorUtility.SetDirty(this);
-
-            Debug.Log("ScriptableObject created and saved at path: " + path);
+            // Create and save Third Party data
+            var thirdPartyData = ScriptableObject.CreateInstance<ThirdPartyData>();
+            thirdPartyData.ThirdPartyEntries = thirdPartyEntries;
+            string thirdPartyPath = dataFolderPath + "/ThirdParty.asset";
+            AssetDatabase.CreateAsset(thirdPartyData, thirdPartyPath);
         }
     }
+
+    //    private void SaveData()
+    //    {
+    //        // Create a folder named "Resources" if it doesn't exist
+    //        string resourcesPath = Application.dataPath + "/Resources";
+    //        if (!Directory.Exists(resourcesPath))
+    //        {
+    //            Directory.CreateDirectory(resourcesPath);
+    //            AssetDatabase.Refresh();
+    //        }
+
+    //        // Create a folder named "Splash Screen Data" inside "Resources" if it doesn't exist
+    //        string dataFolderPath = "Assets/Resources/Splash Screen Data";
+    //        if (!AssetDatabase.IsValidFolder(dataFolderPath))
+    //        {
+    //            AssetDatabase.CreateFolder("Assets/Resources", "Splash Screen Data");
+    //            AssetDatabase.Refresh();
+    //        }
+
+    //        // Create a ScriptableObject instance and save it in the specified path
+    //        var customData = ScriptableObject.CreateInstance<SplashScreenData>();
+    //        customData.DisclaimerTitle = disclaimerTitle;
+    //        customData.DisclaimerDescription = disclaimerDescription;
+    //        customData.EulaTitle = eulaTitle;
+    //        customData.EulaDescription = eulaDescription;
+    //        customData.ThirdPartyEntries = thirdPartyEntries.ToArray();
+
+
+    //        string path = "Assets/Resources/Splash Screen Data/Splash Screen Data.asset";
+    //        AssetDatabase.CreateAsset(customData, path);
+    //        AssetDatabase.SaveAssets();
+    //        AssetDatabase.Refresh();
+    //        EditorUtility.SetDirty(this);
+
+    //        Debug.Log("ScriptableObject created and saved at path: " + path);
+    //    }
+    //}
 
 }
 

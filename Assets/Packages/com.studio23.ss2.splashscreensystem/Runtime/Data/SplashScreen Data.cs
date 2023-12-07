@@ -4,16 +4,30 @@ using UnityEngine;
 
 namespace Studio23.SS2.SplashScreenSystem.Data
 {
-    [CreateAssetMenu(fileName = "SplashScreenData", menuName = "Data/SplashScreenData", order = 1)]
-    public class SplashScreenData : ScriptableObject
+    // DisclaimerData scriptable object data class
+    [System.Serializable]
+    public class DisclaimerData : ScriptableObject
     {
         public string DisclaimerTitle;
         public string DisclaimerDescription;
-        public string EulaTitle;
-        public string EulaDescription;
-        public ThirdPartyEntry[] ThirdPartyEntries;
     }
 
+    // EULAData scriptable object data class
+    [System.Serializable]
+    public class EULAData : ScriptableObject
+    {
+        public string EulaTitle;
+        public string EulaDescription;
+    }
+
+    // ThirdPartyData scriptable object data class
+    [System.Serializable]
+    public class ThirdPartyData : ScriptableObject
+    {
+        public List<ThirdPartyEntry> ThirdPartyEntries = new List<ThirdPartyEntry>();
+    }
+
+    // ThirdPartyEntry class
     [System.Serializable]
     public class ThirdPartyEntry
     {
@@ -25,6 +39,7 @@ namespace Studio23.SS2.SplashScreenSystem.Data
             this.title = title;
             this.image = image;
         }
+
     }
 }
 
