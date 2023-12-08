@@ -4,22 +4,7 @@ using UnityEngine;
 
 namespace Studio23.SS2.SplashScreenSystem.Data
 {
-    // DisclaimerData scriptable object data class
-    [System.Serializable]
-    public class DisclaimerData : ScriptableObject
-    {
-        public string DisclaimerTitle;
-        public string DisclaimerDescription;
-    }
-
-    // EULAData scriptable object data class
-    [System.Serializable]
-    public class EULAData : ScriptableObject
-    {
-        public string EulaTitle;
-        public string EulaDescription;
-    }
-
+  
     // ThirdPartyData scriptable object data class
     [System.Serializable]
     public class ThirdPartyData : ScriptableObject

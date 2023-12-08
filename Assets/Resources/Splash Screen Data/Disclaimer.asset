@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a18b1fa0b1cf9274aa550678280f2000, type: 3}
+  m_Script: {fileID: 11500000, guid: a7a862d03998aa14995427ca268090eb, type: 3}
   m_Name: Disclaimer
   m_EditorClassIdentifier: 
-  DisclaimerTitle: sdasd
-  DisclaimerDescription: asdasdasda
+  DisclaimerTitle: Epty
+  DisclaimerDescription: Biya koro

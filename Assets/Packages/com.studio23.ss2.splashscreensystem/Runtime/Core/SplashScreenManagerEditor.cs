@@ -109,10 +109,6 @@ public class SplashScreenManagerEditor : Editor
         serializedObject.FindProperty("AutoStart").boolValue = EditorGUILayout.Toggle("Auto start", SplashScreenManager.AutoStart);
         serializedObject.FindProperty("TimeBeforeSkip").floatValue = EditorGUILayout.FloatField("Time before the user can skip", SplashScreenManager.TimeBeforeSkip);
 
-        // onFinish
-        if (InvokeFunction = EditorGUILayout.Foldout(InvokeFunction, "When it is over, invoke the function"))
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("onFinish"), true);
-
         // Scene to load
         if (ActivateScene = EditorGUILayout.Foldout(ActivateScene, "Scene to load"))
         {
@@ -135,8 +131,6 @@ public class SplashScreenManagerEditor : Editor
                 var scenePathProperty = serializedObject.FindProperty("SceneToLoad");
                 scenePathProperty.stringValue = newPath;
             }
-
-            serializedObject.FindProperty("LoadingObject").objectReferenceValue = (GameObject)EditorGUILayout.ObjectField("Loading GameObejct", SplashScreenManager.LoadingObject, typeof(GameObject), true);
         }
 
         serializedObject.ApplyModifiedProperties();

@@ -198,53 +198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158121881}
   m_CullTransparentMesh: 0
---- !u!1 &158554610
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 158554611}
-  - component: {fileID: 158554612}
-  m_Layer: 0
-  m_Name: New Splash Screen
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &158554611
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158554610}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1994333275}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &158554612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158554610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bed378b10f26f98418c2cbe76a122c25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  splashScreenMode: 0
-  SplashScreenDuration: 0
-  ShowCursor: 0
 --- !u!850595691 &288146673
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -498,6 +451,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886218907}
   m_CullTransparentMesh: 1
+--- !u!1 &910758759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910758761}
+  - component: {fileID: 910758760}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &910758760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910758759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af3be638c2699348a04d679cf62359c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loadingScreenPrefab: {fileID: 8596143583750184982, guid: c364c08fbde608b43bbe54e0110e3ab6, type: 3}
+--- !u!4 &910758761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910758759}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &937933028
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +505,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 937933030}
-  - component: {fileID: 937933029}
   m_Layer: 0
   m_Name: SplashScreen
   m_TagString: Untagged
@@ -515,22 +512,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &937933029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937933028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7234facf46e22234d9c30812a6c7d82a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disclaimerPrefab: {fileID: 0}
-  eulaPrefab: {fileID: 0}
-  thirdPartiesPrefab: {fileID: 0}
-  splashScreenData: {fileID: 11400000, guid: e2c85a8ef31047a429a175fca06e974a, type: 2}
 --- !u!4 &937933030
 Transform:
   m_ObjectHideFlags: 0
@@ -546,11 +527,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &952777656 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1180987957598136933, guid: 3c41b1e2fa9d33c4e87472375d63b932, type: 3}
-  m_PrefabInstance: {fileID: 1994333274}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1388394039
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180987957352219952, guid: 3c41b1e2fa9d33c4e87472375d63b932, type: 3}
       propertyPath: SceneToLoad
-      value: 
+      value: Assets/Simple SplashScreen/Scenes/GameExempleScene.unity
       objectReference: {fileID: 0}
     - target: {fileID: 1180987957352219952, guid: 3c41b1e2fa9d33c4e87472375d63b932, type: 3}
       propertyPath: FadeOutAtEnd
@@ -757,13 +733,14 @@ PrefabInstance:
     - target: {fileID: 1180987957352219952, guid: 3c41b1e2fa9d33c4e87472375d63b932, type: 3}
       propertyPath: LoadingObject
       value: 
-      objectReference: {fileID: 952777656}
+      objectReference: {fileID: 0}
     - target: {fileID: 1180987957598136933, guid: 3c41b1e2fa9d33c4e87472375d63b932, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1180987957598136933, guid: 3c41b1e2fa9d33c4e87472375d63b932, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1180987957352219953, guid: 3c41b1e2fa9d33c4e87472375d63b932, type: 3}
       insertIndex: -1
@@ -771,9 +748,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1180987957352219953, guid: 3c41b1e2fa9d33c4e87472375d63b932, type: 3}
       insertIndex: -1
       addedObject: {fileID: 842639159}
-    - targetCorrespondingSourceObject: {fileID: 1180987957352219953, guid: 3c41b1e2fa9d33c4e87472375d63b932, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 158554611}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c41b1e2fa9d33c4e87472375d63b932, type: 3}
 --- !u!224 &1994333275 stripped
@@ -880,3 +854,4 @@ SceneRoots:
   - {fileID: 2105629445}
   - {fileID: 1994333274}
   - {fileID: 937933030}
+  - {fileID: 910758761}
