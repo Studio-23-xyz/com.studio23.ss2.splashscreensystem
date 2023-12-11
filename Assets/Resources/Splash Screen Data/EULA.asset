@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d321961f6d9f44439b2a3affc0cd002, type: 3}
   m_Name: EULA
   m_EditorClassIdentifier: 
-  EulaTitle: Dipok
-  EulaDescription: Zim e jao
+  EulaTitle: EULA
+  EulaDescription: EULA Agreemenet

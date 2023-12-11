@@ -18,7 +18,7 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
         private string newEntryTitle = "";
         private Texture2D newEntryImage;
 
-        [MenuItem("Studio-23/Splash Screen System")]
+        [MenuItem("Studio-23/Splash Screen System/Widget")]
         public static void ShowWindow()
         {
             GetWindow<SplashScreenEditor>("Splash Screen System");

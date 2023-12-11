@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a862d03998aa14995427ca268090eb, type: 3}
   m_Name: Disclaimer
   m_EditorClassIdentifier: 
-  DisclaimerTitle: Epty
-  DisclaimerDescription: Biya koro
+  DisclaimerTitle: Disclaimer
+  DisclaimerDescription: This is disclaimer
