@@ -3,6 +3,7 @@ using UnityEditor;
 using System.IO;
 using System.Collections.Generic;
 using Studio23.SS2.SplashScreenSystem.Data;
+using UnityEngine.UI;
 
 
 namespace Studio23.SS2.SplashScreenSystem.Editor
@@ -21,7 +22,7 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
         [MenuItem("Studio-23/Splash Screen System/Widget")]
         public static void ShowWindow()
         {
-            GetWindow<SplashScreenEditor>("Splash Screen System");
+            GetWindow<SplashScreenEditor>("Splash Screen System Widget");
         }
 
         private void OnGUI()
@@ -42,6 +43,7 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
                     
             }
         }
+
 
         private void DrawTabs()
         {
@@ -149,44 +151,62 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             string thirdPartyPath = dataFolderPath + "/ThirdParty.asset";
             AssetDatabase.CreateAsset(thirdPartyData, thirdPartyPath);
         }
+
+
+        [MenuItem("Studio-23/Splash Screen System/Install")]
+        public static void InstallSplashScreenSystem()
+        {
+            bool installed = AreGameObjectsInstalled();
+
+            if (installed)
+            {
+                EditorUtility.DisplayDialog("Splash Screen System", "Splash Screen System is already installed.", "OK");
+            }
+            else
+            {
+                GameObject canvasObj = GameObject.FindObjectOfType<Canvas>()?.gameObject;
+
+                if (canvasObj == null)
+                {
+                    canvasObj = new GameObject("SplashScreenCanvas", typeof(Canvas));
+                    canvasObj.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+                    canvasObj.AddComponent<CanvasScaler>();
+                    canvasObj.AddComponent<GraphicRaycaster>();
+                }
+
+                CreateSplashScreenObjects(canvasObj);
+            }
+        }
+
+        private static bool AreGameObjectsInstalled()
+        {
+            GameObject[] existingGameObjects = GameObject.FindObjectsOfType<GameObject>();
+            foreach (GameObject obj in existingGameObjects)
+            {
+                if (obj.name == "Disclaimer" || obj.name == "Eula" || obj.name == "3rd Party")
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private static void CreateSplashScreenObjects(GameObject canvas)
+        {
+            CreateGameObject("Disclaimer", canvas.transform);
+            CreateGameObject("Eula", canvas.transform);
+            CreateGameObject("3rd Party", canvas.transform);
+        }
+
+        private static void CreateGameObject(string name, Transform parent)
+        {
+            GameObject obj = new GameObject(name);
+            obj.transform.SetParent(parent);
+            RectTransform rectTransform = obj.AddComponent<RectTransform>();
+            // Set RectTransform properties as needed for positioning, size, etc.
+            // Add other necessary components or setup based on your requirements
+        }
+
     }
 
-    //    private void SaveData()
-    //    {
-    //        // Create a folder named "Resources" if it doesn't exist
-    //        string resourcesPath = Application.dataPath + "/Resources";
-    //        if (!Directory.Exists(resourcesPath))
-    //        {
-    //            Directory.CreateDirectory(resourcesPath);
-    //            AssetDatabase.Refresh();
-    //        }
-
-    //        // Create a folder named "Splash Screen Data" inside "Resources" if it doesn't exist
-    //        string dataFolderPath = "Assets/Resources/Splash Screen Data";
-    //        if (!AssetDatabase.IsValidFolder(dataFolderPath))
-    //        {
-    //            AssetDatabase.CreateFolder("Assets/Resources", "Splash Screen Data");
-    //            AssetDatabase.Refresh();
-    //        }
-
-    //        // Create a ScriptableObject instance and save it in the specified path
-    //        var customData = ScriptableObject.CreateInstance<SplashScreenData>();
-    //        customData.DisclaimerTitle = disclaimerTitle;
-    //        customData.DisclaimerDescription = disclaimerDescription;
-    //        customData.EulaTitle = eulaTitle;
-    //        customData.EulaDescription = eulaDescription;
-    //        customData.ThirdPartyEntries = thirdPartyEntries.ToArray();
-
-
-    //        string path = "Assets/Resources/Splash Screen Data/Splash Screen Data.asset";
-    //        AssetDatabase.CreateAsset(customData, path);
-    //        AssetDatabase.SaveAssets();
-    //        AssetDatabase.Refresh();
-    //        EditorUtility.SetDirty(this);
-
-    //        Debug.Log("ScriptableObject created and saved at path: " + path);
-    //    }
-    //}
-
 }
-

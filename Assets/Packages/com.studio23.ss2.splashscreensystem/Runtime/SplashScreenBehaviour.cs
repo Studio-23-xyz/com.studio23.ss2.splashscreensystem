@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SplashScreenBehaviour : MonoBehaviour
@@ -17,7 +15,7 @@ public class SplashScreenBehaviour : MonoBehaviour
 
     public event Action<bool> OnFinish;
 
-    private int currentIndex = 0;
+     public int currentIndex = 0;
 
     private void Start()
     {
@@ -26,7 +24,7 @@ public class SplashScreenBehaviour : MonoBehaviour
 
     private void ShowSplashScreen()
     {
-        if (currentIndex < splashScreens.Length)
+        if (currentIndex < splashScreens.Length)  
         {
             SplashScreen currentSplash = splashScreens[currentIndex];
 
@@ -43,24 +41,25 @@ public class SplashScreenBehaviour : MonoBehaviour
             // Invoke the method to disable the current splash object after 'duration' seconds
             Invoke(nameof(HideSplashScreen), currentSplash.duration);
 
-            currentIndex++;
+           
         }
         else
         {
             // All splash screens shown
             OnFinish?.Invoke(true);
+            currentIndex = 0;
         }
     }
 
     private void HideSplashScreen()
     {
         // Disable the current splash object
-        if (currentIndex - 1 >= 0 && currentIndex - 1 < splashScreens.Length)
+        if (currentIndex >= 0 && currentIndex < splashScreens.Length)
         {
-            SplashScreen previousSplash = splashScreens[currentIndex - 1];
+            SplashScreen previousSplash = splashScreens[currentIndex];
             previousSplash.splashObject.SetActive(false);
         }
-
+        currentIndex++;
         ShowSplashScreen();
     }
 }

@@ -1,6 +1,5 @@
 using Studio23.SS2.SplashScreenSystem.Data;
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,9 +8,9 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance; // Singleton instance
 
     // UI elements to display data
-    public Text titleText;
-    public Text descriptionText;
-    public Image imageDisplay;
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI descriptionText;
+    public RawImage imageDisplay;
 
     private void Awake()
     {
@@ -30,21 +29,24 @@ public class UIManager : MonoBehaviour
             {
                 titleText.text = eulaData.EulaTitle;
                 descriptionText.text = eulaData.EulaDescription;
-                // Set image if needed
-                // imageDisplay.sprite = ...;
+                imageDisplay.texture = null;
+                imageDisplay.gameObject.SetActive(false);
             }
         }
         else if (data is ThirdPartyData)
         {
             ThirdPartyData thirdPartyData = data as ThirdPartyData;
+
             if (thirdPartyData != null && thirdPartyData.ThirdPartyEntries.Count > 0)
             {
-                // Display the first entry's data
+                Vector2 pivot = new Vector2(0.5f, 0.5f);
+
                 ThirdPartyEntry entry = thirdPartyData.ThirdPartyEntries[0];
                 titleText.text = entry.title;
-                // Set other UI elements accordingly
-                // descriptionText.text = ...;
-                // imageDisplay.sprite = ...;
+                descriptionText.text = "";
+                imageDisplay.gameObject.SetActive(true);
+                imageDisplay.texture = entry.image;
+
             }
         }
         else if (data is DisclaimerData)
@@ -54,8 +56,8 @@ public class UIManager : MonoBehaviour
             {
                 titleText.text = disclaimerData.DisclaimerTitle;
                 descriptionText.text = disclaimerData.DisclaimerDescription;
-                // Set image if needed
-                // imageDisplay.sprite = ...;
+                imageDisplay.texture = null;
+                imageDisplay.gameObject.SetActive(false);
             }
         }
     }
