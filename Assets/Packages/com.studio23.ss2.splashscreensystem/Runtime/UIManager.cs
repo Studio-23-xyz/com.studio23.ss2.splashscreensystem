@@ -1,16 +1,21 @@
 using Studio23.SS2.SplashScreenSystem.Data;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance; // Singleton instance
+    public static UIManager Instance;
+    public GameObject ButtonPanel;
 
-    // UI elements to display data
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
-    public RawImage imageDisplay;
+    public Transform rectParent;
+  
+    public GameObject imagePrefab;
+    private ScriptableObject _splashData;
+    private List<GameObject> imageObjects = new List<GameObject>();
 
     private void Awake()
     {
@@ -20,8 +25,29 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    void Start()
+    {
+       //PopulateUI();
+    }
+
+    [ContextMenu("Populate UI")]
+    void PopulateUI()
+    {
+
+        ThirdPartyData thirdPartyData = _splashData as ThirdPartyData;
+
+        foreach (var entry in thirdPartyData.ThirdPartyEntries)
+        {
+            GameObject newImage = Instantiate(imagePrefab, rectParent);
+            newImage.GetComponent<Image>().sprite = Sprite.Create(entry.image, new Rect(0, 0, entry.image.width, entry.image.height), Vector2.zero);
+            imageObjects.Add(newImage);
+        }
+    }
+
     public void DisplayData(ScriptableObject data)
     {
+        _splashData = data;
+
         if (data is EULAData)
         {
             EULAData eulaData = data as EULAData;
@@ -29,8 +55,10 @@ public class UIManager : MonoBehaviour
             {
                 titleText.text = eulaData.EulaTitle;
                 descriptionText.text = eulaData.EulaDescription;
-                imageDisplay.texture = null;
-                imageDisplay.gameObject.SetActive(false);
+                ButtonPanel.SetActive(true);
+                titleText.gameObject.SetActive(true);
+                descriptionText.gameObject.SetActive(true);
+                rectParent.gameObject.SetActive(false);
             }
         }
         else if (data is ThirdPartyData)
@@ -39,14 +67,18 @@ public class UIManager : MonoBehaviour
 
             if (thirdPartyData != null && thirdPartyData.ThirdPartyEntries.Count > 0)
             {
-                Vector2 pivot = new Vector2(0.5f, 0.5f);
+                PopulateUI();
 
+                Vector2 pivot = new Vector2(0.5f, 0.5f);
+    
                 ThirdPartyEntry entry = thirdPartyData.ThirdPartyEntries[0];
                 titleText.text = entry.title;
                 descriptionText.text = "";
-                imageDisplay.gameObject.SetActive(true);
-                imageDisplay.texture = entry.image;
-
+                ButtonPanel.SetActive(false);
+                titleText.gameObject.SetActive(false);
+                descriptionText.gameObject.SetActive(false);
+                rectParent.gameObject.SetActive(true);
+                
             }
         }
         else if (data is DisclaimerData)
@@ -56,8 +88,10 @@ public class UIManager : MonoBehaviour
             {
                 titleText.text = disclaimerData.DisclaimerTitle;
                 descriptionText.text = disclaimerData.DisclaimerDescription;
-                imageDisplay.texture = null;
-                imageDisplay.gameObject.SetActive(false);
+                ButtonPanel.SetActive(false);
+                titleText.gameObject.SetActive(true);
+                descriptionText.gameObject.SetActive(true);
+                rectParent.gameObject.SetActive(false);
             }
         }
     }

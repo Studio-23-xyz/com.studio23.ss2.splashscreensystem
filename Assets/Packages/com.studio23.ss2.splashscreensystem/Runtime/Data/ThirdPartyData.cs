@@ -27,6 +27,3 @@ namespace Studio23.SS2.SplashScreenSystem.Data
 
     }
 }
-
-
-
