@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
 
     //Button
     public Button AcceptBtn;
-    public Button RejectBtn;
+    public Button DeclineBtn;
    
     private void Awake()
     {
@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour
                     SplashScreenBehaviour.OnSubmit(true);
                     SplashScreenBehaviour.HideSplashScreen();
                 });
-                RejectBtn.onClick.AddListener(() =>
+                DeclineBtn.onClick.AddListener(() =>
                 {
                     SplashScreenBehaviour.OnSubmit(false);
                     SplashScreenBehaviour.HideSplashScreen();
