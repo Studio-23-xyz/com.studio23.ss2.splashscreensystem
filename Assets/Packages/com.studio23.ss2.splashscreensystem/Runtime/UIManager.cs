@@ -17,6 +17,12 @@ public class UIManager : MonoBehaviour
     private ScriptableObject _splashData;
     private List<GameObject> imageObjects = new List<GameObject>();
 
+    public SplashScreenBehaviour SplashScreenBehaviour;
+
+    //Button
+    public Button AcceptBtn;
+    public Button RejectBtn;
+   
     private void Awake()
     {
         if (Instance == null)
@@ -25,15 +31,10 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void Start()
-    {
-       //PopulateUI();
-    }
-
+  
     [ContextMenu("Populate UI")]
     void PopulateUI()
     {
-
         ThirdPartyData thirdPartyData = _splashData as ThirdPartyData;
 
         foreach (var entry in thirdPartyData.ThirdPartyEntries)
@@ -41,6 +42,7 @@ public class UIManager : MonoBehaviour
             GameObject newImage = Instantiate(imagePrefab, rectParent);
             newImage.GetComponent<Image>().sprite = Sprite.Create(entry.image, new Rect(0, 0, entry.image.width, entry.image.height), Vector2.zero);
             imageObjects.Add(newImage);
+            rectParent.GetComponent<GridLayoutGroup>().cellSize = new Vector2(entry.image.width, entry.image.height);
         }
     }
 
@@ -59,6 +61,17 @@ public class UIManager : MonoBehaviour
                 titleText.gameObject.SetActive(true);
                 descriptionText.gameObject.SetActive(true);
                 rectParent.gameObject.SetActive(false);
+
+                AcceptBtn.onClick.AddListener(() =>
+                {
+                    SplashScreenBehaviour.OnSubmit(true);
+                    SplashScreenBehaviour.HideSplashScreen();
+                });
+                RejectBtn.onClick.AddListener(() =>
+                {
+                    SplashScreenBehaviour.OnSubmit(false);
+                    SplashScreenBehaviour.HideSplashScreen();
+                });
             }
         }
         else if (data is ThirdPartyData)
@@ -78,7 +91,6 @@ public class UIManager : MonoBehaviour
                 titleText.gameObject.SetActive(false);
                 descriptionText.gameObject.SetActive(false);
                 rectParent.gameObject.SetActive(true);
-                
             }
         }
         else if (data is DisclaimerData)

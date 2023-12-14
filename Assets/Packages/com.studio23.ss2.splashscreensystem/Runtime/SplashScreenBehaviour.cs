@@ -8,7 +8,7 @@ public class SplashScreenBehaviour : MonoBehaviour
     {
         public GameObject splashObject;
         public float duration;
-        public ScriptableObject data; // Reference to your data classes (EULAData, ThirdPartyData, DisclaimerData)
+        public ScriptableObject data;
     }
 
     public SplashScreen[] splashScreens;
@@ -37,12 +37,13 @@ public class SplashScreenBehaviour : MonoBehaviour
                 // Example: Assuming you have a UIManager that handles displaying the data
                 UIManager.Instance.DisplayData(currentSplash.data);
             }
-
-            // Invoke the method to disable the current splash object after 'duration' seconds
-            Invoke(nameof(HideSplashScreen), currentSplash.duration);
-
-           
+            
+            if(currentSplash.data.name != "EULA")
+            {
+                Invoke(nameof(HideSplashScreen), currentSplash.duration);
+            }
         }
+
         else
         {
             // All splash screens shown
@@ -51,7 +52,7 @@ public class SplashScreenBehaviour : MonoBehaviour
         }
     }
 
-    private void HideSplashScreen()
+    public void HideSplashScreen()
     {
         // Disable the current splash object
         if (currentIndex >= 0 && currentIndex < splashScreens.Length)
@@ -61,5 +62,11 @@ public class SplashScreenBehaviour : MonoBehaviour
         }
         currentIndex++;
         ShowSplashScreen();
+    }
+
+    public bool OnSubmit(bool status)
+    {
+        OnFinish?.Invoke(status);
+        return status;
     }
 }

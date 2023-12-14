@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThirdPartyEntries:
   - title: FMOD
-    image: {fileID: 2800000, guid: 02097ec2167c02b49a8cd9304cc12a25, type: 3}
+    image: {fileID: 2800000, guid: f709c56536497d2489b1fbcf21352c1d, type: 3}

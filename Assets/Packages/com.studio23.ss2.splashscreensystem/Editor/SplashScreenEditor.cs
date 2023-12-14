@@ -203,8 +203,6 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             GameObject obj = new GameObject(name);
             obj.transform.SetParent(parent);
             RectTransform rectTransform = obj.AddComponent<RectTransform>();
-            // Set RectTransform properties as needed for positioning, size, etc.
-            // Add other necessary components or setup based on your requirements
         }
 
     }
