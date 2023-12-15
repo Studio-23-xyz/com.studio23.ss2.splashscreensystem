@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject ButtonPanel;
 
     public TextMeshProUGUI titleText;
-    public TextMeshProUGUI descriptionText;
+    public GameObject ScrollRect;
     public Transform rectParent;
   
     public GameObject imagePrefab;
@@ -56,10 +56,11 @@ public class UIManager : MonoBehaviour
             if (eulaData != null)
             {
                 titleText.text = eulaData.EulaTitle;
-                descriptionText.text = eulaData.EulaDescription;
+                ScrollRect.GetComponentInChildren<TextMeshProUGUI>().text = eulaData.EulaDescription;
+                ScrollRect.GetComponent<ScrollRect>().vertical = true;
                 ButtonPanel.SetActive(true);
                 titleText.gameObject.SetActive(true);
-                descriptionText.gameObject.SetActive(true);
+                ScrollRect.gameObject.SetActive(true);
                 rectParent.gameObject.SetActive(false);
 
                 AcceptBtn.onClick.AddListener(() =>
@@ -86,10 +87,10 @@ public class UIManager : MonoBehaviour
     
                 ThirdPartyEntry entry = thirdPartyData.ThirdPartyEntries[0];
                 titleText.text = entry.title;
-                descriptionText.text = "";
+                ScrollRect.GetComponentInChildren<TextMeshProUGUI>().text = "";
                 ButtonPanel.SetActive(false);
                 titleText.gameObject.SetActive(false);
-                descriptionText.gameObject.SetActive(false);
+                ScrollRect.gameObject.SetActive(false);
                 rectParent.gameObject.SetActive(true);
             }
         }
@@ -99,10 +100,10 @@ public class UIManager : MonoBehaviour
             if (disclaimerData != null)
             {
                 titleText.text = disclaimerData.DisclaimerTitle;
-                descriptionText.text = disclaimerData.DisclaimerDescription;
+                ScrollRect.GetComponentInChildren<TextMeshProUGUI>().text = disclaimerData.DisclaimerDescription;
                 ButtonPanel.SetActive(false);
                 titleText.gameObject.SetActive(true);
-                descriptionText.gameObject.SetActive(true);
+                ScrollRect.gameObject.SetActive(true);
                 rectParent.gameObject.SetActive(false);
             }
         }
