@@ -1,5 +1,4 @@
-﻿using Studio23.SS2.SceneLoadingSystem.Core;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -29,7 +28,7 @@ public class SplashScreenManager : MonoBehaviour
     void Start()
     {
 
-        onFinish.AddListener(SceneLoad);
+        //onFinish.AddListener(SceneLoad);
 
         if (AutoStart)
         {
@@ -96,10 +95,10 @@ public class SplashScreenManager : MonoBehaviour
         lastScreen = texture;
     }
 
-    public void SceneLoad()
-    {
-        SceneLoadingSystem.Instance.LoadScene(SceneToLoad);
-    }
+    //public void SceneLoad()
+    //{
+    //    SceneLoadingSystem.Instance.LoadScene(SceneToLoad);
+    //}
 
     private void Loading(bool Active)
     {

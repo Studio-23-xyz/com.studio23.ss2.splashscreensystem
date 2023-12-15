@@ -2,19 +2,9 @@
   "dependencies": {
     "com.cysharp.unitask": {
       "version": "2.5.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://package.openupm.com"
-    },
-    "com.studio23.ss2.loadingsystem": {
-      "version": "1.0.0",
       "depth": 0,
       "source": "registry",
-      "dependencies": {
-        "com.cysharp.unitask": "2.5.0",
-        "com.unity.inputsystem": "1.7.0"
-      },
+      "dependencies": {},
       "url": "https://package.openupm.com"
     },
     "com.studio23.ss2.upmassistant": {
@@ -47,15 +37,6 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.inputsystem": {
-      "version": "1.7.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.uielements": "1.0.0"
-      },
       "url": "https://packages.unity.com"
     },
     "com.unity.nuget.newtonsoft-json": {
