@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using Studio23.SS2.SplashScreenSystem.Data;
 using System.Collections.Generic;
 using TMPro;
@@ -9,6 +10,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
     public GameObject ButtonPanel;
 
+    public GameObject ParentPanel;
     public TextMeshProUGUI titleText;
     public GameObject ScrollRect;
     public Transform rectParent;
@@ -46,6 +48,19 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public async void CrossFadeData(float duration)
+    {
+        float val = 0.0f;
+        ParentPanel.GetComponent<CanvasGroup>().alpha = val;
+        while (val < duration)
+        {
+            val += Time.deltaTime;
+            var ratio = val / duration;
+            ParentPanel.GetComponent<CanvasGroup>().alpha = ratio;
+            await UniTask.Yield();
+        }
+    }
+
     public void DisplayData(ScriptableObject data)
     {
         _splashData = data;
@@ -57,6 +72,7 @@ public class UIManager : MonoBehaviour
             {
                 titleText.text = eulaData.EulaTitle;
                 ScrollRect.GetComponentInChildren<TextMeshProUGUI>().text = eulaData.EulaDescription;
+
                 ScrollRect.GetComponent<ScrollRect>().vertical = true;
                 ButtonPanel.SetActive(true);
                 titleText.gameObject.SetActive(true);

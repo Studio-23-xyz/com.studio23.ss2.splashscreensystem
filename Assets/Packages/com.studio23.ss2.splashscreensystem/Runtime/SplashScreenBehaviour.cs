@@ -1,4 +1,6 @@
+using Cysharp.Threading.Tasks;
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class SplashScreenBehaviour : MonoBehaviour
@@ -6,8 +8,9 @@ public class SplashScreenBehaviour : MonoBehaviour
     [Serializable]
     public class SplashScreen
     {
-        public GameObject splashObject;
+        //public GameObject splashObject;
         public float duration;
+        public float fadeduration;
         public ScriptableObject data;
     }
 
@@ -22,14 +25,14 @@ public class SplashScreenBehaviour : MonoBehaviour
         ShowSplashScreen();
     }
 
-    private void ShowSplashScreen()
+    private async void ShowSplashScreen()
     {
         if (currentIndex < splashScreens.Length)  
         {
             SplashScreen currentSplash = splashScreens[currentIndex];
 
             // Enable the current splash object
-            currentSplash.splashObject.SetActive(true);
+            //currentSplash.splashObject.SetActive(true);
 
             // Pass data to display to the UI elements (assuming you have some script handling this)
             if (currentSplash.data != null)
@@ -37,10 +40,13 @@ public class SplashScreenBehaviour : MonoBehaviour
                 // Example: Assuming you have a UIManager that handles displaying the data
                 UIManager.Instance.DisplayData(currentSplash.data);
             }
-            
-            if(currentSplash.data.name != "EULA")
+
+            CrossFadeScreen(currentSplash.fadeduration);
+            if (currentSplash.data.name != "EULA")
             {
-                Invoke(nameof(HideSplashScreen), currentSplash.duration);
+
+                await UniTask.Delay(TimeSpan.FromSeconds(currentSplash.duration));
+                HideSplashScreen();
             }
         }
 
@@ -58,15 +64,22 @@ public class SplashScreenBehaviour : MonoBehaviour
         if (currentIndex >= 0 && currentIndex < splashScreens.Length)
         {
             SplashScreen previousSplash = splashScreens[currentIndex];
-            previousSplash.splashObject.SetActive(false);
+            //previousSplash.splashObject.SetActive(false);
         }
         currentIndex++;
         ShowSplashScreen();
     }
+
+    public void CrossFadeScreen(float duration)
+    {
+        UIManager.Instance.CrossFadeData(duration);
+    }
+
 
     public bool OnSubmit(bool status)
     {
         OnFinish?.Invoke(status);
         return status;
     }
+
 }
