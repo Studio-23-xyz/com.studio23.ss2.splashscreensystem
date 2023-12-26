@@ -3,8 +3,6 @@ using UnityEditor;
 using System.IO;
 using System.Collections.Generic;
 using Studio23.SS2.SplashScreenSystem.Data;
-using UnityEngine.UI;
-
 
 namespace Studio23.SS2.SplashScreenSystem.Editor
 {
@@ -43,7 +41,6 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
                     
             }
         }
-
 
         private void DrawTabs()
         {
@@ -132,16 +129,17 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             }
 
             // Create and save Disclaimer data
-            var disclaimerData = ScriptableObject.CreateInstance<DisclaimerData>();
-            disclaimerData.DisclaimerTitle = disclaimerTitle;
-            disclaimerData.DisclaimerDescription = disclaimerDescription;
+            var disclaimerData = ScriptableObject.CreateInstance<ScreenTextData>();
+            disclaimerData.Title = disclaimerTitle;
+            disclaimerData.Description = disclaimerDescription;
             string disclaimerPath = dataFolderPath + "/Disclaimer.asset";
             AssetDatabase.CreateAsset(disclaimerData, disclaimerPath);
 
             // Create and save EULA data
-            var EULAdata = ScriptableObject.CreateInstance<EULAData>();
-            EULAdata.EulaTitle = eulaTitle;
-            EULAdata.EulaDescription = eulaDescription;
+            var EULAdata = ScriptableObject.CreateInstance<ScreenTextData>();
+            EULAdata.Title = eulaTitle;
+            EULAdata.Description = eulaDescription;
+            EULAdata.ShowButton = true;
             string eulaPath = dataFolderPath + "/EULA.asset";
             AssetDatabase.CreateAsset(EULAdata, eulaPath);
 
@@ -150,59 +148,6 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             thirdPartyData.ThirdPartyEntries = thirdPartyEntries;
             string thirdPartyPath = dataFolderPath + "/ThirdParty.asset";
             AssetDatabase.CreateAsset(thirdPartyData, thirdPartyPath);
-        }
-
-
-        [MenuItem("Studio-23/Splash Screen System/Install")]
-        public static void InstallSplashScreenSystem()
-        {
-            bool installed = AreGameObjectsInstalled();
-
-            if (installed)
-            {
-                EditorUtility.DisplayDialog("Splash Screen System", "Splash Screen System is already installed.", "OK");
-            }
-            else
-            {
-                GameObject canvasObj = GameObject.FindObjectOfType<Canvas>()?.gameObject;
-
-                if (canvasObj == null)
-                {
-                    canvasObj = new GameObject("SplashScreenCanvas", typeof(Canvas));
-                    canvasObj.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
-                    canvasObj.AddComponent<CanvasScaler>();
-                    canvasObj.AddComponent<GraphicRaycaster>();
-                }
-
-                CreateSplashScreenObjects(canvasObj);
-            }
-        }
-
-        private static bool AreGameObjectsInstalled()
-        {
-            GameObject[] existingGameObjects = GameObject.FindObjectsOfType<GameObject>();
-            foreach (GameObject obj in existingGameObjects)
-            {
-                if (obj.name == "Disclaimer" || obj.name == "Eula" || obj.name == "3rd Party")
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        private static void CreateSplashScreenObjects(GameObject canvas)
-        {
-            CreateGameObject("Disclaimer", canvas.transform);
-            CreateGameObject("Eula", canvas.transform);
-            CreateGameObject("3rd Party", canvas.transform);
-        }
-
-        private static void CreateGameObject(string name, Transform parent)
-        {
-            GameObject obj = new GameObject(name);
-            obj.transform.SetParent(parent);
-            RectTransform rectTransform = obj.AddComponent<RectTransform>();
         }
 
     }

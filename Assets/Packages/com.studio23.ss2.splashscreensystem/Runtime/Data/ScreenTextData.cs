@@ -6,10 +6,11 @@ using UnityEngine;
 namespace Studio23.SS2.SplashScreenSystem.Data
 {
     [System.Serializable]
-    public class EULAData : ScriptableObject
+    public class ScreenTextData : ScriptableObject
     {
-        public string EulaTitle;
-        public string EulaDescription;
+        public string Title;
+        public string Description;
+        public bool ShowButton;
     }
-
 }
+
