@@ -45,6 +45,8 @@ To start using the Splash Screen System. You need to take a few setup stepts
 
 6. At last, you need to create GameObject which may contain 3rd Party's Logos.
 
+7. Or, You can place SplashScreenUIContainer Prefab into canvas.
+
 Scroll View, Button Panel (Game Object) [Under Button Panel ]
 
 ````Csharp

@@ -1,6 +1,6 @@
 {
   "name": "com.studio23.ss2.splashscreensystem",
-  "version": "0.1",
+  "version": "0.0.1",
   "displayName": "Splash Screen System",
   "description": "Unity UMP's Splash Screen System offers seamless integration, allowing swift implementation of captivating introductory screens. With customizable features, animations, and transitions, it ensures a dynamic and polished introduction to any Unity project",
   "unity": "2022.3",
@@ -13,15 +13,25 @@
       "name": "Studio 23",
       "url": "https://package.openupm.com",
       "scopes": [
-        "com.studio23.ss2"
+        "com.studio23.ss2",
+        "com.cysharp.unitask"
       ]
     }
   ],
-  "dependencies": {},
+  "dependencies": {
+    "com.cysharp.unitask": "2.5.0"
+  },
   "keywords": [
     "Splash",
     "Screen",
-    "System"
+    "splash screen"
+  ],
+  "samples": [
+    {
+      "displayName": "Splash Screen Example",
+      "description": "A small sample to demonstrate the abilities of this package.",
+      "path": "Samples~/Demo1"
+    }
   ],
   "author": {
     "name": "Studio 23",
