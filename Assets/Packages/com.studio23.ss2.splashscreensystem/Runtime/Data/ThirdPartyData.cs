@@ -4,15 +4,12 @@ using UnityEngine;
 
 namespace Studio23.SS2.SplashScreenSystem.Data
 {
-  
-    // ThirdPartyData scriptable object data class
     [System.Serializable]
     public class ThirdPartyData : ScriptableObject
     {
         public List<ThirdPartyEntry> ThirdPartyEntries = new List<ThirdPartyEntry>();
     }
 
-    // ThirdPartyEntry class
     [System.Serializable]
     public class ThirdPartyEntry
     {
