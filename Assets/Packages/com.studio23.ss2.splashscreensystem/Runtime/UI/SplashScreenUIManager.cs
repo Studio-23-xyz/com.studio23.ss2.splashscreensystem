@@ -8,9 +8,9 @@ using UnityEngine.UI;
 
 namespace Studio23.SS2.SplashScreenSystem.UI
 {
-    public class UIManager : MonoBehaviour
+    public class SplashScreenUIManager : MonoBehaviour
     {
-        public static UIManager Instance;
+        public static SplashScreenUIManager Instance;
         public GameObject ButtonPanel;
 
         public GameObject ParentPanel;
@@ -80,6 +80,8 @@ namespace Studio23.SS2.SplashScreenSystem.UI
                     rectParent.gameObject.SetActive(false);
                     ScrollRect.GetComponent<ScrollRect>().vertical = textData.ShowButton;
                     ButtonPanel.SetActive(textData.ShowButton);
+                    AcceptBtn.onClick.RemoveAllListeners();
+                    DeclineBtn.onClick.RemoveAllListeners();
                     AcceptBtn.onClick.AddListener(() =>
                     {
                         SplashScreenBehaviour.OnSubmit(true);

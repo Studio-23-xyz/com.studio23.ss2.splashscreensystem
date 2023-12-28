@@ -23,7 +23,7 @@ namespace Studio23.SS2.SplashScreenSystem.Core
             {
                 SplashScreenData currentSplash = splashScreens[currentIndex];
                 if (currentSplash.data != null)
-                    UIManager.Instance.DisplayData(currentSplash.data);
+                    SplashScreenUIManager.Instance.DisplayData(currentSplash.data);
                 CrossFadeScreen(currentSplash.fadeduration);
                 if (currentSplash.data.name != "EULA")
                 {
@@ -46,7 +46,7 @@ namespace Studio23.SS2.SplashScreenSystem.Core
 
         public void CrossFadeScreen(float duration)
         {
-            UIManager.Instance.CrossFadeData(duration);
+            SplashScreenUIManager.Instance.CrossFadeData(duration);
         }
 
         public bool OnSubmit(bool status)
