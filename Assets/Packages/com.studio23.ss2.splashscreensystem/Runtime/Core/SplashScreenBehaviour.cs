@@ -8,10 +8,10 @@ namespace Studio23.SS2.SplashScreenSystem.Core
 {
     public class SplashScreenBehaviour : MonoBehaviour
     {
-        public SplashScreenData[] splashScreens;
+        public SplashScreen[] splashScreens;
         public event Action<bool> OnFinish;
         public int currentIndex = 0;
-
+        
         private void Start()
         {
             ShowSplashScreen();
@@ -21,7 +21,7 @@ namespace Studio23.SS2.SplashScreenSystem.Core
         {
             if (currentIndex < splashScreens.Length)
             {
-                SplashScreenData currentSplash = splashScreens[currentIndex];
+                SplashScreen currentSplash = splashScreens[currentIndex];
                 if (currentSplash.data != null)
                     SplashScreenUIManager.Instance.DisplayData(currentSplash.data);
                 CrossFadeScreen(currentSplash.fadeduration);

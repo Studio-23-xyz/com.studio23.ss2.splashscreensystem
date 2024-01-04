@@ -4,10 +4,10 @@ using UnityEngine;
 namespace Studio23.SS2.SplashScreenSystem.Data
 {
     [Serializable]
-    public class SplashScreenData
+    public class SplashScreen
     {
         public float duration;
         public float fadeduration;
-        public ScriptableObject data;
+        public SplashScreenData data;
     }
 }
