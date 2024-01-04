@@ -13,7 +13,7 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
         private string disclaimerDescription = "";
         private string eulaTitle = "";
         private string eulaDescription = "";
-        private List<ThirdPartyEntry> thirdPartyEntries = new List<ThirdPartyEntry>();
+        private List<ThirdPartyDataEntry> thirdPartyEntries = new List<ThirdPartyDataEntry>();
         private string newEntryTitle = "";
         private Texture2D newEntryImage;
 
@@ -100,7 +100,7 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
 
             if (GUILayout.Button("Add"))
             {
-                thirdPartyEntries.Add(new ThirdPartyEntry(newEntryTitle, newEntryImage));
+                thirdPartyEntries.Add(new ThirdPartyDataEntry(newEntryTitle, newEntryImage));
                 newEntryTitle = "";
                 newEntryImage = null;
             }

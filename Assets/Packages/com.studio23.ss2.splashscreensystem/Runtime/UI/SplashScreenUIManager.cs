@@ -14,6 +14,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
         public GameObject ButtonPanel;
 
         public GameObject ParentPanel;
+        private CanvasGroup _parentCanvasGroup;
         public TextMeshProUGUI titleText;
         public GameObject ScrollRect;
         public Transform rectParent;
@@ -32,6 +33,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
         private void Awake()
         {
             ScrollRectText = ScrollRect.GetComponentInChildren<TextMeshProUGUI>();
+            _parentCanvasGroup = ParentPanel.GetComponent<CanvasGroup>();
 
             if (Instance == null)
                 Instance = this;
@@ -55,12 +57,12 @@ namespace Studio23.SS2.SplashScreenSystem.UI
         public async void CrossFadeData(float duration)
         {
             float val = 0.0f;
-            ParentPanel.GetComponent<CanvasGroup>().alpha = val;
+            _parentCanvasGroup.alpha = val;
             while (val < duration)
             {
                 val += Time.deltaTime;
                 var ratio = val / duration;
-                ParentPanel.GetComponent<CanvasGroup>().alpha = ratio;
+                _parentCanvasGroup.alpha = ratio;
                 await UniTask.Yield();
             }
         }

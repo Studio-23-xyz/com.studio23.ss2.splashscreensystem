@@ -29,12 +29,12 @@ namespace Studio23.SS2.SplashScreenSystem.Data
             ui.AcceptBtn.onClick.AddListener(() =>
             {
                 ui.SplashScreenBehaviour.OnSubmit(true);
-                ui.SplashScreenBehaviour.HideSplashScreen();
+                //ui.SplashScreenBehaviour.HideSplashScreen();
             });
             ui.DeclineBtn.onClick.AddListener(() =>
             {
                 ui.SplashScreenBehaviour.OnSubmit(false);
-                ui.SplashScreenBehaviour.HideSplashScreen();
+                //ui.SplashScreenBehaviour.HideSplashScreen();
             });
         }
     }

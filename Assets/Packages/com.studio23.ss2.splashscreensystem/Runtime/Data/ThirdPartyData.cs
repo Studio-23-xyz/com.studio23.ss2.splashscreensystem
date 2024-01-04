@@ -10,7 +10,7 @@ namespace Studio23.SS2.SplashScreenSystem.Data
     [System.Serializable]
     public class ThirdPartyData : SplashScreenData
     {
-        public List<ThirdPartyEntry> ThirdPartyEntries = new List<ThirdPartyEntry>();
+        public List<ThirdPartyDataEntry> ThirdPartyEntries = new List<ThirdPartyDataEntry>();
 
         public override void show(SplashScreenUIManager ui)
         {
@@ -24,7 +24,7 @@ namespace Studio23.SS2.SplashScreenSystem.Data
 
             Vector2 pivot = new Vector2(0.5f, 0.5f);
 
-            ThirdPartyEntry firstEntry = ThirdPartyEntries[0];
+            ThirdPartyDataEntry firstEntry = ThirdPartyEntries[0];
             ui.titleText.text = firstEntry.title;
             ui.ScrollRect.GetComponentInChildren<TextMeshProUGUI>().text = "";
             ui.ButtonPanel.SetActive(false);
@@ -35,12 +35,12 @@ namespace Studio23.SS2.SplashScreenSystem.Data
     }
 
     [System.Serializable]
-    public class ThirdPartyEntry
+    public class ThirdPartyDataEntry
     {
         public string title;
         public Texture2D image;
 
-        public ThirdPartyEntry(string title, Texture2D image)
+        public ThirdPartyDataEntry(string title, Texture2D image)
         {
             this.title = title;
             this.image = image;
