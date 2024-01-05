@@ -13,12 +13,18 @@ namespace Studio23.SS2.SplashScreenSystem.Data
 
         public override void UpdateAndShowSplashContainer(SplashScreenUIManager ui)
         {
+            GridLayoutGroup gridLayout = ui.RectParent.GetComponent<GridLayoutGroup>();
+
             foreach (var entry in ThirdPartyEntries)
             {
                 GameObject newImage = Instantiate(ui.ImagePrefab, ui.RectParent);
-                newImage.GetComponent<Image>().sprite = Sprite.Create(entry.image, new Rect(0, 0, entry.image.width, entry.image.height), Vector2.zero);
+                Image newImageComponent = newImage.GetComponent<Image>();
+
+                newImageComponent.sprite = Sprite.Create(entry.image, new Rect(0, 0, entry.image.width, entry.image.height), Vector2.zero);
                 ui.ImageObjects.Add(newImage);
-                ui.RectParent.GetComponent<GridLayoutGroup>().cellSize = new Vector2(entry.image.width, entry.image.height);
+
+                // Assuming cellSize should be set for each image individually
+                gridLayout.cellSize = new Vector2(entry.image.width, entry.image.height);
             }
 
             Vector2 pivot = new Vector2(0.5f, 0.5f);
@@ -50,4 +56,5 @@ namespace Studio23.SS2.SplashScreenSystem.Data
     {
         public abstract void UpdateAndShowSplashContainer(SplashScreenUIManager ui);
     }
+
 }

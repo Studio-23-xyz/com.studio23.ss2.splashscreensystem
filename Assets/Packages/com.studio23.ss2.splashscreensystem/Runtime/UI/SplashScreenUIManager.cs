@@ -11,7 +11,6 @@ namespace Studio23.SS2.SplashScreenSystem.UI
     public class SplashScreenUIManager : MonoBehaviour
     {
         private CanvasGroup _parentCanvasGroup;
-        private SplashScreenData _splashData;
 
         public static SplashScreenUIManager Instance;
         public GameObject ButtonPanel;
@@ -32,13 +31,21 @@ namespace Studio23.SS2.SplashScreenSystem.UI
 
         private void Awake()
         {
-            ScrollRectText = ScrollRect.GetComponentInChildren<TextMeshProUGUI>();
-            _parentCanvasGroup = ParentPanel.GetComponent<CanvasGroup>();
-
             if (Instance == null)
                 Instance = this;
             else
                 Destroy(gameObject);
+        }
+
+        private void Start()
+        {
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            ScrollRectText = ScrollRect.GetComponentInChildren<TextMeshProUGUI>();
+            _parentCanvasGroup = ParentPanel.GetComponent<CanvasGroup>();
         }
 
         public async void CrossFadeData(float duration)
@@ -56,8 +63,6 @@ namespace Studio23.SS2.SplashScreenSystem.UI
 
         public void DisplayData(SplashScreenData data)
         {
-            _splashData = data;
-
             data.UpdateAndShowSplashContainer(this);
         }
     }
