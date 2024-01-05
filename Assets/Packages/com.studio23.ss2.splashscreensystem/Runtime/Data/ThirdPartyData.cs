@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 namespace Studio23.SS2.SplashScreenSystem.Data
 {
     [System.Serializable]
@@ -12,25 +11,25 @@ namespace Studio23.SS2.SplashScreenSystem.Data
     {
         public List<ThirdPartyDataEntry> ThirdPartyEntries = new List<ThirdPartyDataEntry>();
 
-        public override void show(SplashScreenUIManager ui)
+        public override void UpdateAndShowSplashContainer(SplashScreenUIManager ui)
         {
             foreach (var entry in ThirdPartyEntries)
             {
-                GameObject newImage = Instantiate(ui.imagePrefab, ui.rectParent);
+                GameObject newImage = Instantiate(ui.ImagePrefab, ui.RectParent);
                 newImage.GetComponent<Image>().sprite = Sprite.Create(entry.image, new Rect(0, 0, entry.image.width, entry.image.height), Vector2.zero);
                 ui.ImageObjects.Add(newImage);
-                ui.rectParent.GetComponent<GridLayoutGroup>().cellSize = new Vector2(entry.image.width, entry.image.height);
+                ui.RectParent.GetComponent<GridLayoutGroup>().cellSize = new Vector2(entry.image.width, entry.image.height);
             }
 
             Vector2 pivot = new Vector2(0.5f, 0.5f);
 
             ThirdPartyDataEntry firstEntry = ThirdPartyEntries[0];
-            ui.titleText.text = firstEntry.title;
+            ui.TitleText.text = firstEntry.title;
             ui.ScrollRect.GetComponentInChildren<TextMeshProUGUI>().text = "";
             ui.ButtonPanel.SetActive(false);
-            ui.titleText.gameObject.SetActive(false);
+            ui.TitleText.gameObject.SetActive(false);
             ui.ScrollRect.gameObject.SetActive(false);
-            ui.rectParent.gameObject.SetActive(true);
+            ui.RectParent.gameObject.SetActive(true);
         }
     }
 
@@ -49,6 +48,6 @@ namespace Studio23.SS2.SplashScreenSystem.Data
 
     public abstract class SplashScreenData : ScriptableObject
     {
-        public abstract void show(SplashScreenUIManager ui);
+        public abstract void UpdateAndShowSplashContainer(SplashScreenUIManager ui);
     }
 }

@@ -10,17 +10,17 @@ namespace Studio23.SS2.SplashScreenSystem.UI
 {
     public class SplashScreenUIManager : MonoBehaviour
     {
+        private CanvasGroup _parentCanvasGroup;
+        private SplashScreenData _splashData;
+
         public static SplashScreenUIManager Instance;
         public GameObject ButtonPanel;
-
         public GameObject ParentPanel;
-        private CanvasGroup _parentCanvasGroup;
-        public TextMeshProUGUI titleText;
+        public TextMeshProUGUI TitleText;
         public GameObject ScrollRect;
-        public Transform rectParent;
+        public Transform RectParent;
 
-        public GameObject imagePrefab;
-        private SplashScreenData _splashData;
+        public GameObject ImagePrefab;
         public List<GameObject> ImageObjects = new List<GameObject>();
 
         public SplashScreenBehaviour SplashScreenBehaviour;
@@ -41,19 +41,6 @@ namespace Studio23.SS2.SplashScreenSystem.UI
                 Destroy(gameObject);
         }
 
-
- 
-        void PopulateUI(ThirdPartyData thirdPartyData)
-        {
-            foreach (var entry in thirdPartyData.ThirdPartyEntries)
-            {
-                GameObject newImage = Instantiate(imagePrefab, rectParent);
-                newImage.GetComponent<Image>().sprite = Sprite.Create(entry.image, new Rect(0, 0, entry.image.width, entry.image.height), Vector2.zero);
-                ImageObjects.Add(newImage);
-                rectParent.GetComponent<GridLayoutGroup>().cellSize = new Vector2(entry.image.width, entry.image.height);
-            }
-        }
-
         public async void CrossFadeData(float duration)
         {
             float val = 0.0f;
@@ -71,7 +58,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
         {
             _splashData = data;
 
-            data.show(this);
+            data.UpdateAndShowSplashContainer(this);
         }
     }
 }

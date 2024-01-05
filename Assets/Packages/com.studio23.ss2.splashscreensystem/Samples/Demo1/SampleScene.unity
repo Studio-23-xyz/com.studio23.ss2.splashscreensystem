@@ -275,11 +275,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonPanel: {fileID: 962917532}
   ParentPanel: {fileID: 580802355}
-  titleText: {fileID: 661296479}
+  TitleText: {fileID: 661296479}
   ScrollRect: {fileID: 1702296285}
-  rectParent: {fileID: 655422973}
-  imagePrefab: {fileID: 1921867790023361800, guid: cfb0962c1f239ed42abbde68a6a53685, type: 3}
+  RectParent: {fileID: 655422973}
+  ImagePrefab: {fileID: 1921867790023361800, guid: cfb0962c1f239ed42abbde68a6a53685, type: 3}
+  ImageObjects: []
   SplashScreenBehaviour: {fileID: 482048334}
+  ScrollRectText: {fileID: 0}
   AcceptBtn: {fileID: 217956317}
   DeclineBtn: {fileID: 1915943071}
 --- !u!114 &482048334
@@ -294,17 +296,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35dc6abd0b5a1c47b06964756c35efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splashScreens:
-  - duration: 3
-    fadeduration: 2
-    data: {fileID: 11400000, guid: 29f5a1a0e40954c46ae67d0257fe0722, type: 2}
-  - duration: 3
-    fadeduration: 2
-    data: {fileID: 11400000, guid: fdd5e5a611325c749b9420b1eeff4552, type: 2}
-  - duration: 3
-    fadeduration: 2
-    data: {fileID: 11400000, guid: d023f6925293b1a48b5c1b1bbe07844f, type: 2}
-  currentIndex: 0
+  SplashScreens:
+  - Duration: 5
+    FadeDuration: 3
+    Data: {fileID: 11400000, guid: 29f5a1a0e40954c46ae67d0257fe0722, type: 2}
+  - Duration: 5
+    FadeDuration: 3
+    Data: {fileID: 11400000, guid: fdd5e5a611325c749b9420b1eeff4552, type: 2}
+  - Duration: 5
+    FadeDuration: 3
+    Data: {fileID: 11400000, guid: d023f6925293b1a48b5c1b1bbe07844f, type: 2}
+  OnEULAResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSplashScreenCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  CurrentIndex: 0
 --- !u!1 &580802355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1406939263118335986, guid: f0d2eba92c770024abb2d6598a17e048, type: 3}
@@ -645,6 +653,14 @@ PrefabInstance:
     - target: {fileID: 3229992417727282338, guid: f0d2eba92c770024abb2d6598a17e048, type: 3}
       propertyPath: m_Name
       value: SplashScreenUIContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229992417727282338, guid: f0d2eba92c770024abb2d6598a17e048, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819096621237670154, guid: f0d2eba92c770024abb2d6598a17e048, type: 3}
+      propertyPath: m_Alpha
+      value: 0.71894217
       objectReference: {fileID: 0}
     - target: {fileID: 7237442077204760462, guid: f0d2eba92c770024abb2d6598a17e048, type: 3}
       propertyPath: m_AnchorMax.y

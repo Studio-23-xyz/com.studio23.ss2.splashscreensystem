@@ -4,21 +4,19 @@ using Studio23.SS2.SplashScreenSystem.UI;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 namespace Studio23.SS2.SplashScreenSystem.Core
 {
     [System.Serializable]
-    public class UnityEventWithBool : UnityEvent<bool> { }
+    public class UnityEventWithBool : UnityEvent<bool> {}
     public class SplashScreenBehaviour : MonoBehaviour
     {
-        public SplashScreen[] splashScreens;
+        public SplashScreen[] SplashScreens;
         public UnityEventWithBool OnEULAResponse;
         public UnityEvent OnSplashScreenCompleted;
-        public int currentIndex = 0;
+
         private bool _eulaButtonClicked;
-        
+
         private void Start()
         {
             ShowSplashScreen();
@@ -26,23 +24,17 @@ namespace Studio23.SS2.SplashScreenSystem.Core
 
         private async void ShowSplashScreen()
         {
-            foreach (var s in splashScreens)
+            foreach (var s in SplashScreens)
             {
                 SplashScreen currentSplash = s;
-                if (currentSplash.data != null)
-                    SplashScreenUIManager.Instance.DisplayData(currentSplash.data);
-                CrossFadeScreen(currentSplash.fadeduration);
-                if (currentSplash.data.name != "EULA")
-                    await UniTask.Delay(TimeSpan.FromSeconds(currentSplash.duration));
+                if (currentSplash.Data != null)
+                    SplashScreenUIManager.Instance.DisplayData(currentSplash.Data);
+                CrossFadeScreen(currentSplash.FadeDuration);
+                if (currentSplash.Data.name != "EULA")
+                    await UniTask.Delay(TimeSpan.FromSeconds(currentSplash.Duration));
                 else
                     await UniTask.WaitUntil(() => _eulaButtonClicked);
             }
-        }
-
-        public void HideSplashScreen()
-        {
-            currentIndex++;
-            ShowSplashScreen();
         }
 
         public void CrossFadeScreen(float duration)
@@ -56,6 +48,5 @@ namespace Studio23.SS2.SplashScreenSystem.Core
             _eulaButtonClicked = true;
             return status;
         }
-
     }
 }

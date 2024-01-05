@@ -8,14 +8,14 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
 {
     public class SplashScreenEditor : EditorWindow
     {
-        private int selectedTab = 0;
-        private string disclaimerTitle = "";
-        private string disclaimerDescription = "";
-        private string eulaTitle = "";
-        private string eulaDescription = "";
-        private List<ThirdPartyDataEntry> thirdPartyEntries = new List<ThirdPartyDataEntry>();
-        private string newEntryTitle = "";
-        private Texture2D newEntryImage;
+        private int _selectedTab = 0;
+        private string _disclaimerTitle = "";
+        private string _disclaimerDescription = "";
+        private string _eulaTitle = "";
+        private string _eulaDescription = "";
+        private List<ThirdPartyDataEntry> _thirdPartyEntries = new List<ThirdPartyDataEntry>();
+        private string _newEntryTitle = "";
+        private Texture2D _newEntryImage;
 
         [MenuItem("Studio-23/Splash Screen System/Widget")]
         public static void ShowWindow()
@@ -27,7 +27,7 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
         {
             DrawTabs();
 
-            switch (selectedTab)
+            switch (_selectedTab)
             {
                 case 0:
                     DrawDisclaimerTab();
@@ -38,24 +38,23 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
                 case 2:
                     DrawThirdPartyTab();
                     break;
-                    
             }
         }
 
         private void DrawTabs()
         {
             GUILayout.BeginHorizontal();
-            if (GUILayout.Toggle(selectedTab == 0, "Disclaimer", "Button"))
+            if (GUILayout.Toggle(_selectedTab == 0, "Disclaimer", "Button"))
             {
-                selectedTab = 0;
+                _selectedTab = 0;
             }
-            if (GUILayout.Toggle(selectedTab == 1, "EULA", "Button"))
+            if (GUILayout.Toggle(_selectedTab == 1, "EULA", "Button"))
             {
-                selectedTab = 1;
+                _selectedTab = 1;
             }
-            if (GUILayout.Toggle(selectedTab == 2, "3rd Party Container", "Button"))
+            if (GUILayout.Toggle(_selectedTab == 2, "3rd Party Container", "Button"))
             {
-                selectedTab = 2;
+                _selectedTab = 2;
             }
             GUILayout.EndHorizontal();
             GUILayout.Space(20);
@@ -64,16 +63,16 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
         private void DrawDisclaimerTab()
         {
             GUILayout.Label("Disclaimer", EditorStyles.boldLabel);
-            disclaimerTitle = EditorGUILayout.TextField("Title", disclaimerTitle);
-            disclaimerDescription = EditorGUILayout.TextField("Description", disclaimerDescription, GUILayout.Height(100));
+            _disclaimerTitle = EditorGUILayout.TextField("Title", _disclaimerTitle);
+            _disclaimerDescription = EditorGUILayout.TextField("Description", _disclaimerDescription, GUILayout.Height(100));
             GUILayout.Space(20);
         }
 
         private void DrawEulaTab()
         {
             GUILayout.Label("EULA", EditorStyles.boldLabel);
-            eulaTitle = EditorGUILayout.TextField("Title", eulaTitle);
-            eulaDescription = EditorGUILayout.TextField("Description", eulaDescription, GUILayout.Height(100));
+            _eulaTitle = EditorGUILayout.TextField("Title", _eulaTitle);
+            _eulaDescription = EditorGUILayout.TextField("Description", _eulaDescription, GUILayout.Height(100));
             GUILayout.Space(20);
         }
 
@@ -81,7 +80,7 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
         {
             GUILayout.Label("3rd Party Container", EditorStyles.boldLabel);
 
-            foreach (var entry in thirdPartyEntries)
+            foreach (var entry in _thirdPartyEntries)
             {
                 EditorGUILayout.BeginHorizontal();
                 GUILayout.Label(entry.title);
@@ -92,17 +91,17 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             GUILayout.Space(10);
 
             GUILayout.BeginHorizontal();
-            newEntryTitle = EditorGUILayout.TextField("Title", newEntryTitle);
-            newEntryImage = (Texture2D)EditorGUILayout.ObjectField("Image", newEntryImage, typeof(Texture2D), false);
+            _newEntryTitle = EditorGUILayout.TextField("Title", _newEntryTitle);
+            _newEntryImage = (Texture2D)EditorGUILayout.ObjectField("Image", _newEntryImage, typeof(Texture2D), false);
             GUILayout.EndHorizontal();
 
             GUILayout.Space(10);
 
             if (GUILayout.Button("Add"))
             {
-                thirdPartyEntries.Add(new ThirdPartyDataEntry(newEntryTitle, newEntryImage));
-                newEntryTitle = "";
-                newEntryImage = null;
+                _thirdPartyEntries.Add(new ThirdPartyDataEntry(_newEntryTitle, _newEntryImage));
+                _newEntryTitle = "";
+                _newEntryImage = null;
             }
 
             if (GUILayout.Button("Save Data"))
@@ -130,26 +129,24 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
 
             // Create and save Disclaimer data
             var disclaimerData = ScriptableObject.CreateInstance<ScreenTextData>();
-            disclaimerData.Title = disclaimerTitle;
-            disclaimerData.Description = disclaimerDescription;
+            disclaimerData.Title = _disclaimerTitle;
+            disclaimerData.Description = _disclaimerDescription;
             string disclaimerPath = dataFolderPath + "/Disclaimer.asset";
             AssetDatabase.CreateAsset(disclaimerData, disclaimerPath);
 
             // Create and save EULA data
             var EULAdata = ScriptableObject.CreateInstance<ScreenTextData>();
-            EULAdata.Title = eulaTitle;
-            EULAdata.Description = eulaDescription;
+            EULAdata.Title = _eulaTitle;
+            EULAdata.Description = _eulaDescription;
             EULAdata.ShowButton = true;
             string eulaPath = dataFolderPath + "/EULA.asset";
             AssetDatabase.CreateAsset(EULAdata, eulaPath);
 
             // Create and save Third Party data
             var thirdPartyData = ScriptableObject.CreateInstance<ThirdPartyData>();
-            thirdPartyData.ThirdPartyEntries = thirdPartyEntries;
+            thirdPartyData.ThirdPartyEntries = _thirdPartyEntries;
             string thirdPartyPath = dataFolderPath + "/ThirdParty.asset";
             AssetDatabase.CreateAsset(thirdPartyData, thirdPartyPath);
         }
-
     }
-
 }
