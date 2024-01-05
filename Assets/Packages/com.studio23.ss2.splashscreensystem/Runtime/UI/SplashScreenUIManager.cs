@@ -61,7 +61,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
             }
         }
 
-        public void DisplayData(SplashScreenData data)
+        public void DisplayData(SplashScreenSO data)
         {
             data.UpdateAndShowSplashContainer(this);
         }

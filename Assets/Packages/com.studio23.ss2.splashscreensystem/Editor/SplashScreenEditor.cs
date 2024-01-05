@@ -83,8 +83,8 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             foreach (var entry in _thirdPartyEntries)
             {
                 EditorGUILayout.BeginHorizontal();
-                GUILayout.Label(entry.title);
-                GUILayout.Box(entry.image, GUILayout.Width(50), GUILayout.Height(50));
+                GUILayout.Label(entry.Title);
+                GUILayout.Box(entry.Image, GUILayout.Width(50), GUILayout.Height(50));
                 EditorGUILayout.EndHorizontal();
             }
 

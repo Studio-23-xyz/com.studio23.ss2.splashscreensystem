@@ -4,7 +4,7 @@ using UnityEngine.UI;
 namespace Studio23.SS2.SplashScreenSystem.Data
 {
     [System.Serializable]
-    public class ScreenTextData : SplashScreenData
+    public class ScreenTextData : SplashScreenSO
     {
         public string Title;
         public string Description;

@@ -11,7 +11,7 @@ namespace Studio23.SS2.SplashScreenSystem.Core
     public class UnityEventWithBool : UnityEvent<bool> {}
     public class SplashScreenBehaviour : MonoBehaviour
     {
-        public SplashScreen[] SplashScreens;
+        public SplashScreenData[] SplashScreens;
         public UnityEventWithBool OnEULAResponse;
         public UnityEvent OnSplashScreenCompleted;
 
@@ -24,9 +24,9 @@ namespace Studio23.SS2.SplashScreenSystem.Core
 
         private async void ShowSplashScreen()
         {
-            foreach (var s in SplashScreens)
+            foreach (var splash in SplashScreens)
             {
-                SplashScreen currentSplash = s;
+                SplashScreenData currentSplash = splash;
                 if (currentSplash.Data != null)
                     SplashScreenUIManager.Instance.DisplayData(currentSplash.Data);
                 CrossFadeScreen(currentSplash.FadeDuration);
