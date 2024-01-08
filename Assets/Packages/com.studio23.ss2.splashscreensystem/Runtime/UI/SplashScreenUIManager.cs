@@ -19,7 +19,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
         public GameObject ScrollRect;
         public Transform RectParent;
 
-        public GameObject ImagePrefab;
+        public Image ImagePrefab;
         public SplashScreenBehaviour SplashScreenBehaviour;
         public TextMeshProUGUI ScrollRectText;
 

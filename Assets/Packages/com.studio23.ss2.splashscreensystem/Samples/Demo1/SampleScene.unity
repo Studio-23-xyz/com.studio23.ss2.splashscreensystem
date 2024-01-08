@@ -278,7 +278,7 @@ MonoBehaviour:
   TitleText: {fileID: 661296479}
   ScrollRect: {fileID: 1702296285}
   RectParent: {fileID: 655422973}
-  ImagePrefab: {fileID: 1921867790023361800, guid: cfb0962c1f239ed42abbde68a6a53685, type: 3}
+  ImagePrefab: {fileID: 6679128746867531280, guid: cfb0962c1f239ed42abbde68a6a53685, type: 3}
   SplashScreenBehaviour: {fileID: 482048334}
   ScrollRectText: {fileID: 0}
   GridLayout: {fileID: 0}
@@ -711,7 +711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6819096621237670154, guid: f0d2eba92c770024abb2d6598a17e048, type: 3}
       propertyPath: m_Alpha
-      value: 0.9336545
+      value: 0.90745395
       objectReference: {fileID: 0}
     - target: {fileID: 6917433470983077142, guid: f0d2eba92c770024abb2d6598a17e048, type: 3}
       propertyPath: m_AnchorMax.y

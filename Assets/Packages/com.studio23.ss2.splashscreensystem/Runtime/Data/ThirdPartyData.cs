@@ -1,6 +1,5 @@
 using Studio23.SS2.SplashScreenSystem.UI;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,10 +12,9 @@ namespace Studio23.SS2.SplashScreenSystem.Data
 
         public override void UpdateAndShowSplashContainer(SplashScreenUIManager ui)
         {
-
             foreach (var entry in ThirdPartyEntries)
             {
-                Image newImageComponent = Instantiate(ui.ImagePrefab.GetComponent<Image>(), ui.RectParent);
+                Image newImageComponent = Instantiate(ui.ImagePrefab, ui.RectParent);
                 newImageComponent.sprite = Sprite.Create(entry.Image, new Rect(0, 0, entry.Image.width, entry.Image.height), Vector2.zero);
 
                 // Assuming cellSize should be set for each image individually
