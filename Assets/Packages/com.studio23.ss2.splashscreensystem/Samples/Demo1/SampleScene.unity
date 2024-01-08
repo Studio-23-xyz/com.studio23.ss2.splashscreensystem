@@ -279,9 +279,9 @@ MonoBehaviour:
   ScrollRect: {fileID: 1702296285}
   RectParent: {fileID: 655422973}
   ImagePrefab: {fileID: 1921867790023361800, guid: cfb0962c1f239ed42abbde68a6a53685, type: 3}
-  ImageObjects: []
   SplashScreenBehaviour: {fileID: 482048334}
   ScrollRectText: {fileID: 0}
+  GridLayout: {fileID: 0}
   AcceptBtn: {fileID: 217956317}
   DeclineBtn: {fileID: 1915943071}
 --- !u!114 &482048334
@@ -299,13 +299,13 @@ MonoBehaviour:
   SplashScreens:
   - Duration: 5
     FadeDuration: 3
-    Data: {fileID: 11400000, guid: 29f5a1a0e40954c46ae67d0257fe0722, type: 2}
+    Data: {fileID: 11400000, guid: baf8bfcbde063a840b1a959b2a0a402e, type: 2}
   - Duration: 5
     FadeDuration: 3
-    Data: {fileID: 11400000, guid: fdd5e5a611325c749b9420b1eeff4552, type: 2}
+    Data: {fileID: 11400000, guid: cd5b9e1416cfae64b8eb3b8736c98134, type: 2}
   - Duration: 5
     FadeDuration: 3
-    Data: {fileID: 11400000, guid: d023f6925293b1a48b5c1b1bbe07844f, type: 2}
+    Data: {fileID: 11400000, guid: d73cb80a88bc256439527acf8b7f7c42, type: 2}
   OnEULAResponse:
     m_PersistentCalls:
       m_Calls: []
@@ -711,7 +711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6819096621237670154, guid: f0d2eba92c770024abb2d6598a17e048, type: 3}
       propertyPath: m_Alpha
-      value: 0.81534475
+      value: 0.9336545
       objectReference: {fileID: 0}
     - target: {fileID: 6917433470983077142, guid: f0d2eba92c770024abb2d6598a17e048, type: 3}
       propertyPath: m_AnchorMax.y

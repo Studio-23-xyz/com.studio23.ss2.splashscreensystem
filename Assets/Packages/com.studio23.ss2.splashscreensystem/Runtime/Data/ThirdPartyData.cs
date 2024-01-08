@@ -13,25 +13,19 @@ namespace Studio23.SS2.SplashScreenSystem.Data
 
         public override void UpdateAndShowSplashContainer(SplashScreenUIManager ui)
         {
-            GridLayoutGroup gridLayout = ui.RectParent.GetComponent<GridLayoutGroup>();
 
             foreach (var entry in ThirdPartyEntries)
             {
-                GameObject newImage = Instantiate(ui.ImagePrefab, ui.RectParent);
-                Image newImageComponent = newImage.GetComponent<Image>();
-
+                Image newImageComponent = Instantiate(ui.ImagePrefab.GetComponent<Image>(), ui.RectParent);
                 newImageComponent.sprite = Sprite.Create(entry.Image, new Rect(0, 0, entry.Image.width, entry.Image.height), Vector2.zero);
-                ui.ImageObjects.Add(newImage);
 
                 // Assuming cellSize should be set for each image individually
-                gridLayout.cellSize = new Vector2(entry.Image.width, entry.Image.height);
+                ui.GridLayout.cellSize = new Vector2(entry.Image.width, entry.Image.height);
             }
 
             Vector2 pivot = new Vector2(0.5f, 0.5f);
-
             ThirdPartyDataEntry firstEntry = ThirdPartyEntries[0];
             ui.TitleText.text = firstEntry.Title;
-            ui.ScrollRect.GetComponentInChildren<TextMeshProUGUI>().text = "";
             ui.ButtonPanel.SetActive(false);
             ui.TitleText.gameObject.SetActive(false);
             ui.ScrollRect.gameObject.SetActive(false);

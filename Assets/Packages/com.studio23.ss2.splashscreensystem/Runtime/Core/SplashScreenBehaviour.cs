@@ -21,7 +21,6 @@ namespace Studio23.SS2.SplashScreenSystem.Core
         {
             ShowSplashScreen();
         }
-
         private async void ShowSplashScreen()
         {
             foreach (var splash in SplashScreens)
@@ -36,12 +35,10 @@ namespace Studio23.SS2.SplashScreenSystem.Core
                     await UniTask.WaitUntil(() => _eulaButtonClicked);
             }
         }
-
         public void CrossFadeScreen(float duration)
         {
             SplashScreenUIManager.Instance.CrossFadeData(duration);
         }
-
         public bool OnSubmit(bool status)
         {
             OnEULAResponse?.Invoke(status);

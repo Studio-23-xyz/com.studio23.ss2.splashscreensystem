@@ -20,10 +20,10 @@ namespace Studio23.SS2.SplashScreenSystem.UI
         public Transform RectParent;
 
         public GameObject ImagePrefab;
-        public List<GameObject> ImageObjects = new List<GameObject>();
-
         public SplashScreenBehaviour SplashScreenBehaviour;
         public TextMeshProUGUI ScrollRectText;
+
+        public GridLayoutGroup GridLayout; 
 
         //Button
         public Button AcceptBtn;
@@ -46,6 +46,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
         {
             ScrollRectText = ScrollRect.GetComponentInChildren<TextMeshProUGUI>();
             _parentCanvasGroup = ParentPanel.GetComponent<CanvasGroup>();
+            GridLayout = RectParent.GetComponent<GridLayoutGroup>();
         }
 
         public async void CrossFadeData(float duration)
