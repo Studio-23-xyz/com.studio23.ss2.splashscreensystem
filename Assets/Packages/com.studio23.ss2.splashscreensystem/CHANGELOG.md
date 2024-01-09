@@ -1,5 +1,11 @@
 # Changelog
 
+## [v1.0.0] - 2024-01-09
+
+### Added
+
+- Prepared for packaging
+
 ## [v0.0.1] - 2024-01-05
 
 ### Added
