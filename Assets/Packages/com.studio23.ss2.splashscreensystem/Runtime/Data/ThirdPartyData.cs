@@ -23,7 +23,6 @@ namespace Studio23.SS2.SplashScreenSystem.Data
 
             Vector2 pivot = new Vector2(0.5f, 0.5f);
             ThirdPartyDataEntry firstEntry = ThirdPartyEntries[0];
-            ui.TitleText.text = firstEntry.Title;
             ui.ButtonPanel.SetActive(false);
             ui.TitleText.gameObject.SetActive(false);
             ui.ScrollRect.gameObject.SetActive(false);

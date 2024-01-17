@@ -42,7 +42,7 @@ namespace Studio23.SS2.SplashScreenSystem.Core
         public bool OnSubmit(bool status)
         {
             OnEULAResponse?.Invoke(status);
-            _eulaButtonClicked = true;
+            _eulaButtonClicked = status;
             return status;
         }
     }
