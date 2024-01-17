@@ -1,6 +1,59 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Global
+  name: ''
+  href: api/Global.html
+- uid: Global.FontData
+  name: FontData
+  href: api/Global.FontData.html
+  commentId: T:Global.FontData
+  fullName: FontData
+  nameWithType: FontData
+- uid: Global.FontData.#ctor(FontData)
+  name: FontData(FontData)
+  href: api/Global.FontData.html#Global_FontData__ctor_FontData_
+  commentId: M:Global.FontData.#ctor(FontData)
+  name.vb: New(FontData)
+  fullName: FontData.FontData(FontData)
+  fullName.vb: FontData.New(FontData)
+  nameWithType: FontData.FontData(FontData)
+  nameWithType.vb: FontData.New(FontData)
+- uid: Global.FontData.#ctor*
+  name: FontData
+  href: api/Global.FontData.html#Global_FontData__ctor_
+  commentId: Overload:Global.FontData.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: FontData.FontData
+  fullName.vb: FontData.New
+  nameWithType: FontData.FontData
+  nameWithType.vb: FontData.New
+- uid: Global.FontData.FontAsset
+  name: FontAsset
+  href: api/Global.FontData.html#Global_FontData_FontAsset
+  commentId: F:Global.FontData.FontAsset
+  fullName: FontData.FontAsset
+  nameWithType: FontData.FontAsset
+- uid: Global.FontData.FontStyle
+  name: FontStyle
+  href: api/Global.FontData.html#Global_FontData_FontStyle
+  commentId: F:Global.FontData.FontStyle
+  fullName: FontData.FontStyle
+  nameWithType: FontData.FontStyle
+- uid: Global.FontData.UpdateFontDataToText(TextMeshProUGUI)
+  name: UpdateFontDataToText(TextMeshProUGUI)
+  href: api/Global.FontData.html#Global_FontData_UpdateFontDataToText_TextMeshProUGUI_
+  commentId: M:Global.FontData.UpdateFontDataToText(TextMeshProUGUI)
+  fullName: FontData.UpdateFontDataToText(TextMeshProUGUI)
+  nameWithType: FontData.UpdateFontDataToText(TextMeshProUGUI)
+- uid: Global.FontData.UpdateFontDataToText*
+  name: UpdateFontDataToText
+  href: api/Global.FontData.html#Global_FontData_UpdateFontDataToText_
+  commentId: Overload:Global.FontData.UpdateFontDataToText
+  isSpec: "True"
+  fullName: FontData.UpdateFontDataToText
+  nameWithType: FontData.UpdateFontDataToText
 - uid: Studio23.SS2.SplashScreenSystem.Core
   name: Studio23.SS2.SplashScreenSystem.Core
   href: api/Studio23.SS2.SplashScreenSystem.Core.html
@@ -87,6 +140,12 @@ references:
   commentId: F:Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.Description
   fullName: Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.Description
   nameWithType: ScreenTextData.Description
+- uid: Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.DescriptionFontData
+  name: DescriptionFontData
+  href: api/Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.html#Studio23_SS2_SplashScreenSystem_Data_ScreenTextData_DescriptionFontData
+  commentId: F:Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.DescriptionFontData
+  fullName: Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.DescriptionFontData
+  nameWithType: ScreenTextData.DescriptionFontData
 - uid: Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.ShowButton
   name: ShowButton
   href: api/Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.html#Studio23_SS2_SplashScreenSystem_Data_ScreenTextData_ShowButton
@@ -99,6 +158,12 @@ references:
   commentId: F:Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.Title
   fullName: Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.Title
   nameWithType: ScreenTextData.Title
+- uid: Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.TitleFontData
+  name: TitleFontData
+  href: api/Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.html#Studio23_SS2_SplashScreenSystem_Data_ScreenTextData_TitleFontData
+  commentId: F:Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.TitleFontData
+  fullName: Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.TitleFontData
+  nameWithType: ScreenTextData.TitleFontData
 - uid: Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.UpdateAndShowSplashContainer(Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager)
   name: UpdateAndShowSplashContainer(SplashScreenUIManager)
   href: api/Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.html#Studio23_SS2_SplashScreenSystem_Data_ScreenTextData_UpdateAndShowSplashContainer_Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_
@@ -186,15 +251,15 @@ references:
   commentId: T:Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry
   fullName: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry
   nameWithType: ThirdPartyDataEntry
-- uid: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.#ctor(System.String,Texture2D)
-  name: ThirdPartyDataEntry(string, Texture2D)
-  href: api/Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.html#Studio23_SS2_SplashScreenSystem_Data_ThirdPartyDataEntry__ctor_System_String_Texture2D_
-  commentId: M:Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.#ctor(System.String,Texture2D)
-  name.vb: New(String, Texture2D)
-  fullName: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.ThirdPartyDataEntry(string, Texture2D)
-  fullName.vb: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.New(String, Texture2D)
-  nameWithType: ThirdPartyDataEntry.ThirdPartyDataEntry(string, Texture2D)
-  nameWithType.vb: ThirdPartyDataEntry.New(String, Texture2D)
+- uid: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.#ctor(Texture2D)
+  name: ThirdPartyDataEntry(Texture2D)
+  href: api/Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.html#Studio23_SS2_SplashScreenSystem_Data_ThirdPartyDataEntry__ctor_Texture2D_
+  commentId: M:Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.#ctor(Texture2D)
+  name.vb: New(Texture2D)
+  fullName: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.ThirdPartyDataEntry(Texture2D)
+  fullName.vb: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.New(Texture2D)
+  nameWithType: ThirdPartyDataEntry.ThirdPartyDataEntry(Texture2D)
+  nameWithType.vb: ThirdPartyDataEntry.New(Texture2D)
 - uid: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.#ctor*
   name: ThirdPartyDataEntry
   href: api/Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.html#Studio23_SS2_SplashScreenSystem_Data_ThirdPartyDataEntry__ctor_
@@ -211,12 +276,6 @@ references:
   commentId: F:Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.Image
   fullName: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.Image
   nameWithType: ThirdPartyDataEntry.Image
-- uid: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.Title
-  name: Title
-  href: api/Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.html#Studio23_SS2_SplashScreenSystem_Data_ThirdPartyDataEntry_Title
-  commentId: F:Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.Title
-  fullName: Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.Title
-  nameWithType: ThirdPartyDataEntry.Title
 - uid: Studio23.SS2.SplashScreenSystem.Editor
   name: Studio23.SS2.SplashScreenSystem.Editor
   href: api/Studio23.SS2.SplashScreenSystem.Editor.html

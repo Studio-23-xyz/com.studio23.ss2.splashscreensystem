@@ -15,6 +15,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.FontData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.FontData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.yml",
       "output": {
         ".html": {

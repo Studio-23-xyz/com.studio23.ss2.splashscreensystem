@@ -1,4 +1,14 @@
 {
+  "api/Global.FontData.html": {
+    "href": "api/Global.FontData.html",
+    "title": "Class FontData | |",
+    "keywords": "Class FontData Namespace Global [Serializable] public class FontData Inheritance object FontData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors FontData(FontData) public FontData(FontData data = null) Parameters data FontData Fields FontAsset public TMP_FontAsset FontAsset Field Value TMP_FontAsset FontStyle public FontStyles FontStyle Field Value FontStyles Methods UpdateFontDataToText(TextMeshProUGUI) public void UpdateFontDataToText(TextMeshProUGUI text) Parameters text TextMeshProUGUI"
+  },
+  "api/Global.html": {
+    "href": "api/Global.html",
+    "title": "Namespace | |",
+    "keywords": "Namespace Classes FontData"
+  },
   "api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html": {
     "href": "api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html",
     "title": "Class SplashScreenBehaviour | |",
@@ -17,7 +27,7 @@
   "api/Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.html": {
     "href": "api/Studio23.SS2.SplashScreenSystem.Data.ScreenTextData.html",
     "title": "Class ScreenTextData | |",
-    "keywords": "Class ScreenTextData Namespace Studio23.SS2.SplashScreenSystem.Data [Serializable] public class ScreenTextData : SplashScreenSO Inheritance object SplashScreenSO ScreenTextData Fields Description public string Description Field Value string ShowButton public bool ShowButton Field Value bool Title public string Title Field Value string Methods UpdateAndShowSplashContainer(SplashScreenUIManager) public override void UpdateAndShowSplashContainer(SplashScreenUIManager ui) Parameters ui SplashScreenUIManager"
+    "keywords": "Class ScreenTextData Namespace Studio23.SS2.SplashScreenSystem.Data [Serializable] public class ScreenTextData : SplashScreenSO Inheritance object SplashScreenSO ScreenTextData Fields Description public string Description Field Value string DescriptionFontData public FontData DescriptionFontData Field Value FontData ShowButton public bool ShowButton Field Value bool Title public string Title Field Value string TitleFontData public FontData TitleFontData Field Value FontData Methods UpdateAndShowSplashContainer(SplashScreenUIManager) public override void UpdateAndShowSplashContainer(SplashScreenUIManager ui) Parameters ui SplashScreenUIManager"
   },
   "api/Studio23.SS2.SplashScreenSystem.Data.SplashScreenData.html": {
     "href": "api/Studio23.SS2.SplashScreenSystem.Data.SplashScreenData.html",
@@ -37,7 +47,7 @@
   "api/Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.html": {
     "href": "api/Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry.html",
     "title": "Class ThirdPartyDataEntry | |",
-    "keywords": "Class ThirdPartyDataEntry Namespace Studio23.SS2.SplashScreenSystem.Data [Serializable] public class ThirdPartyDataEntry Inheritance object ThirdPartyDataEntry Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors ThirdPartyDataEntry(string, Texture2D) public ThirdPartyDataEntry(string title, Texture2D image) Parameters title string image Texture2D Fields Image public Texture2D Image Field Value Texture2D Title public string Title Field Value string"
+    "keywords": "Class ThirdPartyDataEntry Namespace Studio23.SS2.SplashScreenSystem.Data [Serializable] public class ThirdPartyDataEntry Inheritance object ThirdPartyDataEntry Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors ThirdPartyDataEntry(Texture2D) public ThirdPartyDataEntry(Texture2D image) Parameters image Texture2D Fields Image public Texture2D Image Field Value Texture2D"
   },
   "api/Studio23.SS2.SplashScreenSystem.Data.html": {
     "href": "api/Studio23.SS2.SplashScreenSystem.Data.html",
@@ -72,7 +82,7 @@
   "changelog/CHANGELOG.html": {
     "href": "changelog/CHANGELOG.html",
     "title": "Changelog | |",
-    "keywords": "Changelog [v1.0.0] - 2024-01-09 Added Prepared for packaging [v0.0.1] - 2024-01-05 Added New Editor script to generate data for Disclaimer, EULA and third-party packages icons. New SplashScreenUIManager and SplashScreenBehaviour classes added which will be the entrypoint into using this library. New test cases to ensure library is working as intended. Refactor Code."
+    "keywords": "Changelog [v1.0.1] - 2024-01-17 Added Added font settings in splash screen Patches Updated prefabs [v1.0.0] - 2024-01-09 Added Prepared for packaging [v0.0.1] - 2024-01-05 Added New Editor script to generate data for Disclaimer, EULA and third-party packages icons. New SplashScreenUIManager and SplashScreenBehaviour classes added which will be the entrypoint into using this library. New test cases to ensure library is working as intended. Refactor Code."
   },
   "index.html": {
     "href": "index.html",
