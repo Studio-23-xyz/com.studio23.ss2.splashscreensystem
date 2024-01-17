@@ -1,5 +1,16 @@
 # Changelog
 
+## [v1.0.1] - 2024-01-17
+
+### Added
+
+- Added font settings in splash screen
+
+### Patches
+
+- Updated prefabs
+
+
 ## [v1.0.0] - 2024-01-09
 
 ### Added

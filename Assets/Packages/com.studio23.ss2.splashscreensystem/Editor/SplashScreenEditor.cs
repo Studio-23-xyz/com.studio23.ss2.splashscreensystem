@@ -3,6 +3,8 @@ using UnityEditor;
 using System.IO;
 using System.Collections.Generic;
 using Studio23.SS2.SplashScreenSystem.Data;
+using TMPro;
+using UnityEngine.TextCore.Text;
 
 namespace Studio23.SS2.SplashScreenSystem.Editor
 {
@@ -11,10 +13,14 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
         private int _selectedTab = 0;
         private string _disclaimerTitle = "";
         private string _disclaimerDescription = "";
+        private FontData _disclaimerTitleFontSettings;
+        private FontData _disclaimerDescriptionFontSettings;
         private string _eulaTitle = "";
         private string _eulaDescription = "";
+        private FontData _EULATitleFontSettings;
+        private FontData _EULADescriptionFontSettings;
+
         private List<ThirdPartyDataEntry> _thirdPartyEntries = new List<ThirdPartyDataEntry>();
-        private string _newEntryTitle = "";
         private Texture2D _newEntryImage;
 
         [MenuItem("Studio-23/Splash Screen System/Widget")]
@@ -65,6 +71,14 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             GUILayout.Label("Disclaimer", EditorStyles.boldLabel);
             _disclaimerTitle = EditorGUILayout.TextField("Title", _disclaimerTitle);
             _disclaimerDescription = EditorGUILayout.TextField("Description", _disclaimerDescription, GUILayout.Height(100));
+
+            GUILayout.Label("Title Font Settings", EditorStyles.boldLabel);
+            _disclaimerTitleFontSettings = DrawTextSettingsFields(_disclaimerTitleFontSettings);
+
+            GUILayout.Label("Description Font Settings", EditorStyles.boldLabel);
+            _disclaimerDescriptionFontSettings = DrawTextSettingsFields(_disclaimerDescriptionFontSettings);
+
+
             GUILayout.Space(20);
         }
 
@@ -73,6 +87,13 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             GUILayout.Label("EULA", EditorStyles.boldLabel);
             _eulaTitle = EditorGUILayout.TextField("Title", _eulaTitle);
             _eulaDescription = EditorGUILayout.TextField("Description", _eulaDescription, GUILayout.Height(100));
+
+            GUILayout.Label("Title Font Settings", EditorStyles.boldLabel);
+            _EULATitleFontSettings = DrawTextSettingsFields(_EULATitleFontSettings);
+
+            GUILayout.Label("Description Font Settings", EditorStyles.boldLabel);
+            _EULADescriptionFontSettings = DrawTextSettingsFields(_EULADescriptionFontSettings);
+
             GUILayout.Space(20);
         }
 
@@ -83,7 +104,6 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             foreach (var entry in _thirdPartyEntries)
             {
                 EditorGUILayout.BeginHorizontal();
-                GUILayout.Label(entry.Title);
                 GUILayout.Box(entry.Image, GUILayout.Width(50), GUILayout.Height(50));
                 EditorGUILayout.EndHorizontal();
             }
@@ -91,7 +111,7 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             GUILayout.Space(10);
 
             GUILayout.BeginHorizontal();
-            _newEntryTitle = EditorGUILayout.TextField("Title", _newEntryTitle);
+            //_newEntryTitle = EditorGUILayout.TextField("Title", _newEntryTitle);
             _newEntryImage = (Texture2D)EditorGUILayout.ObjectField("Image", _newEntryImage, typeof(Texture2D), false);
             GUILayout.EndHorizontal();
 
@@ -99,8 +119,8 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
 
             if (GUILayout.Button("Add"))
             {
-                _thirdPartyEntries.Add(new ThirdPartyDataEntry(_newEntryTitle, _newEntryImage));
-                _newEntryTitle = "";
+                _thirdPartyEntries.Add(new ThirdPartyDataEntry( _newEntryImage));
+                //_newEntryTitle = "";
                 _newEntryImage = null;
             }
 
@@ -108,6 +128,19 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             {
                 SaveData();
             }
+        }
+
+
+        private FontData DrawTextSettingsFields(FontData textSettings)
+        {
+            if (textSettings == null)
+                textSettings = new FontData();
+
+            textSettings.FontAsset = (TMP_FontAsset)EditorGUILayout.ObjectField("Font Asset", textSettings.FontAsset,
+                typeof(TMP_FontAsset), false);
+            textSettings.FontStyle = (TMPro.FontStyles)EditorGUILayout.EnumPopup("Font Style", textSettings.FontStyle);
+
+            return textSettings;
         }
 
         private void SaveData()
@@ -131,6 +164,8 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             var disclaimerData = ScriptableObject.CreateInstance<ScreenTextData>();
             disclaimerData.Title = _disclaimerTitle;
             disclaimerData.Description = _disclaimerDescription;
+            disclaimerData.TitleFontData = new FontData(_disclaimerTitleFontSettings);
+            disclaimerData.DescriptionFontData = new FontData(_disclaimerDescriptionFontSettings); ;
             string disclaimerPath = dataFolderPath + "/Disclaimer.asset";
             AssetDatabase.CreateAsset(disclaimerData, disclaimerPath);
 
@@ -139,6 +174,10 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
             EULAdata.Title = _eulaTitle;
             EULAdata.Description = _eulaDescription;
             EULAdata.ShowButton = true;
+
+            EULAdata.TitleFontData = new FontData(_EULATitleFontSettings);
+            EULAdata.DescriptionFontData = new FontData(_EULADescriptionFontSettings);
+
             string eulaPath = dataFolderPath + "/EULA.asset";
             AssetDatabase.CreateAsset(EULAdata, eulaPath);
 
