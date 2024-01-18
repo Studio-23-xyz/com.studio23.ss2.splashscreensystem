@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.0.2] - 2024-01-17
+
+### Patch
+
+- Fixed Script Flow For Getting Component
+- Invoked splash screen end event
+
 ## [v1.0.1] - 2024-01-17
 
 ### Added

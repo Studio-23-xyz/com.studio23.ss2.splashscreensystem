@@ -34,6 +34,8 @@ namespace Studio23.SS2.SplashScreenSystem.Core
                 else
                     await UniTask.WaitUntil(() => _eulaButtonClicked);
             }
+
+            OnSplashScreenCompleted?.Invoke();
         }
         public void CrossFadeScreen(float duration)
         {
