@@ -35,10 +35,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
                 Instance = this;
             else
                 Destroy(gameObject);
-        }
 
-        private void Start()
-        {
             Initialize();
         }
 
