@@ -10,22 +10,18 @@ namespace Studio23.SS2.SplashScreenSystem.UI
 {
     public class SplashScreenUIManager : MonoBehaviour
     {
-        private CanvasGroup _parentCanvasGroup;
-
         public static SplashScreenUIManager Instance;
+
+        private CanvasGroup _parentCanvasGroup;
         public GameObject ButtonPanel;
         public GameObject ParentPanel;
         public TextMeshProUGUI TitleText;
         public GameObject ScrollRect;
         public Transform RectParent;
-
         public Image ImagePrefab;
         public SplashScreenBehaviour SplashScreenBehaviour;
         public TextMeshProUGUI ScrollRectText;
-
-        public GridLayoutGroup GridLayout; 
-
-        //Button
+        public GridLayoutGroup GridLayout;
         public Button AcceptBtn;
         public Button DeclineBtn;
 

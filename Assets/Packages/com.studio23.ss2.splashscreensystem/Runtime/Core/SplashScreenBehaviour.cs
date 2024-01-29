@@ -8,11 +8,10 @@ using UnityEngine.Events;
 namespace Studio23.SS2.SplashScreenSystem.Core
 {
     [System.Serializable]
-    public class UnityEventWithBool : UnityEvent<bool> {}
     public class SplashScreenBehaviour : MonoBehaviour
     {
-        public SplashScreenData[] SplashScreens;
-        public UnityEventWithBool OnEULAResponse;
+        [SerializeField] private SplashScreenData[] _splashScreens;
+        public UnityEvent<bool> OnEULAResponse;
         public UnityEvent OnSplashScreenCompleted;
 
         private bool _eulaButtonClicked;
@@ -23,7 +22,7 @@ namespace Studio23.SS2.SplashScreenSystem.Core
         }
         private async void ShowSplashScreen()
         {
-            foreach (var splash in SplashScreens)
+            foreach (var splash in _splashScreens)
             {
                 SplashScreenData currentSplash = splash;
                 if (currentSplash.Data != null)
