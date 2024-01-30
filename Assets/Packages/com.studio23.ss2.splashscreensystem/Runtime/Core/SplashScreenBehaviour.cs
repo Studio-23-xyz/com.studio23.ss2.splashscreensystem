@@ -11,10 +11,10 @@ namespace Studio23.SS2.SplashScreenSystem.Core
     public class SplashScreenBehaviour : MonoBehaviour
     {
         [SerializeField] private SplashScreenData[] _splashScreens;
-        public UnityEvent<bool> OnEULAResponse;
+        public UnityEvent<bool> OnPageResponse;
         public UnityEvent OnSplashScreenCompleted;
 
-        private bool _eulaButtonClicked;
+        private bool _pageButtonClicked;
 
         private void Start()
         {
@@ -24,14 +24,15 @@ namespace Studio23.SS2.SplashScreenSystem.Core
         {
             foreach (var splash in _splashScreens)
             {
+                _pageButtonClicked = false;
                 SplashScreenData currentSplash = splash;
                 if (currentSplash.Data != null)
                     SplashScreenUIManager.Instance.DisplayData(currentSplash.Data);
                 CrossFadeScreen(currentSplash.FadeDuration);
-                if (currentSplash.Data.name != "EULA")
+                if (!currentSplash.Data.IsInteractable)
                     await UniTask.Delay(TimeSpan.FromSeconds(currentSplash.Duration));
                 else
-                    await UniTask.WaitUntil(() => _eulaButtonClicked);
+                    await UniTask.WaitUntil(() => _pageButtonClicked);
             }
 
             OnSplashScreenCompleted?.Invoke();
@@ -42,8 +43,8 @@ namespace Studio23.SS2.SplashScreenSystem.Core
         }
         public bool OnSubmit(bool status)
         {
-            OnEULAResponse?.Invoke(status);
-            _eulaButtonClicked = status;
+            OnPageResponse?.Invoke(status);
+            _pageButtonClicked = status;
             return status;
         }
     }
