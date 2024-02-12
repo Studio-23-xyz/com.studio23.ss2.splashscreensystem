@@ -54,6 +54,25 @@ references:
   isSpec: "True"
   fullName: FontData.UpdateFontDataToText
   nameWithType: FontData.UpdateFontDataToText
+- uid: Global.SplashScreenThirdPartyPageEditor
+  name: SplashScreenThirdPartyPageEditor
+  href: api/Global.SplashScreenThirdPartyPageEditor.html
+  commentId: T:Global.SplashScreenThirdPartyPageEditor
+  fullName: SplashScreenThirdPartyPageEditor
+  nameWithType: SplashScreenThirdPartyPageEditor
+- uid: Global.SplashScreenThirdPartyPageEditor.ShowWindow
+  name: ShowWindow()
+  href: api/Global.SplashScreenThirdPartyPageEditor.html#Global_SplashScreenThirdPartyPageEditor_ShowWindow
+  commentId: M:Global.SplashScreenThirdPartyPageEditor.ShowWindow
+  fullName: SplashScreenThirdPartyPageEditor.ShowWindow()
+  nameWithType: SplashScreenThirdPartyPageEditor.ShowWindow()
+- uid: Global.SplashScreenThirdPartyPageEditor.ShowWindow*
+  name: ShowWindow
+  href: api/Global.SplashScreenThirdPartyPageEditor.html#Global_SplashScreenThirdPartyPageEditor_ShowWindow_
+  commentId: Overload:Global.SplashScreenThirdPartyPageEditor.ShowWindow
+  isSpec: "True"
+  fullName: SplashScreenThirdPartyPageEditor.ShowWindow
+  nameWithType: SplashScreenThirdPartyPageEditor.ShowWindow
 - uid: Studio23.SS2.SplashScreenSystem.Core
   name: Studio23.SS2.SplashScreenSystem.Core
   href: api/Studio23.SS2.SplashScreenSystem.Core.html
@@ -82,12 +101,12 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.CrossFadeScreen
   nameWithType: SplashScreenBehaviour.CrossFadeScreen
-- uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnEULAResponse
-  name: OnEULAResponse
-  href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_OnEULAResponse
-  commentId: F:Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnEULAResponse
-  fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnEULAResponse
-  nameWithType: SplashScreenBehaviour.OnEULAResponse
+- uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnPageResponse
+  name: OnPageResponse
+  href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_OnPageResponse
+  commentId: F:Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnPageResponse
+  fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnPageResponse
+  nameWithType: SplashScreenBehaviour.OnPageResponse
 - uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnSplashScreenCompleted
   name: OnSplashScreenCompleted
   href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_OnSplashScreenCompleted
@@ -110,18 +129,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnSubmit
   nameWithType: SplashScreenBehaviour.OnSubmit
-- uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SplashScreens
-  name: SplashScreens
-  href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_SplashScreens
-  commentId: F:Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SplashScreens
-  fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SplashScreens
-  nameWithType: SplashScreenBehaviour.SplashScreens
-- uid: Studio23.SS2.SplashScreenSystem.Core.UnityEventWithBool
-  name: UnityEventWithBool
-  href: api/Studio23.SS2.SplashScreenSystem.Core.UnityEventWithBool.html
-  commentId: T:Studio23.SS2.SplashScreenSystem.Core.UnityEventWithBool
-  fullName: Studio23.SS2.SplashScreenSystem.Core.UnityEventWithBool
-  nameWithType: UnityEventWithBool
 - uid: Studio23.SS2.SplashScreenSystem.Data
   name: Studio23.SS2.SplashScreenSystem.Data
   href: api/Studio23.SS2.SplashScreenSystem.Data.html
@@ -207,6 +214,12 @@ references:
   commentId: T:Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO
   fullName: Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO
   nameWithType: SplashScreenSO
+- uid: Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO.IsInteractable
+  name: IsInteractable
+  href: api/Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO.html#Studio23_SS2_SplashScreenSystem_Data_SplashScreenSO_IsInteractable
+  commentId: F:Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO.IsInteractable
+  fullName: Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO.IsInteractable
+  nameWithType: SplashScreenSO.IsInteractable
 - uid: Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO.UpdateAndShowSplashContainer(Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager)
   name: UpdateAndShowSplashContainer(SplashScreenUIManager)
   href: api/Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO.html#Studio23_SS2_SplashScreenSystem_Data_SplashScreenSO_UpdateAndShowSplashContainer_Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_
@@ -282,25 +295,31 @@ references:
   commentId: N:Studio23.SS2.SplashScreenSystem.Editor
   fullName: Studio23.SS2.SplashScreenSystem.Editor
   nameWithType: Studio23.SS2.SplashScreenSystem.Editor
-- uid: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor
-  name: SplashScreenEditor
-  href: api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.html
-  commentId: T:Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor
-  fullName: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor
-  nameWithType: SplashScreenEditor
-- uid: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.ShowWindow
+- uid: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor
+  name: SplashScreenPageEditor
+  href: api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.html
+  commentId: T:Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor
+  fullName: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor
+  nameWithType: SplashScreenPageEditor
+- uid: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.ShowWindow
   name: ShowWindow()
-  href: api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.html#Studio23_SS2_SplashScreenSystem_Editor_SplashScreenEditor_ShowWindow
-  commentId: M:Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.ShowWindow
-  fullName: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.ShowWindow()
-  nameWithType: SplashScreenEditor.ShowWindow()
-- uid: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.ShowWindow*
+  href: api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.html#Studio23_SS2_SplashScreenSystem_Editor_SplashScreenPageEditor_ShowWindow
+  commentId: M:Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.ShowWindow
+  fullName: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.ShowWindow()
+  nameWithType: SplashScreenPageEditor.ShowWindow()
+- uid: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.ShowWindow*
   name: ShowWindow
-  href: api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.html#Studio23_SS2_SplashScreenSystem_Editor_SplashScreenEditor_ShowWindow_
-  commentId: Overload:Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.ShowWindow
+  href: api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.html#Studio23_SS2_SplashScreenSystem_Editor_SplashScreenPageEditor_ShowWindow_
+  commentId: Overload:Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.ShowWindow
   isSpec: "True"
-  fullName: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.ShowWindow
-  nameWithType: SplashScreenEditor.ShowWindow
+  fullName: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.ShowWindow
+  nameWithType: SplashScreenPageEditor.ShowWindow
+- uid: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor._isInteractable
+  name: _isInteractable
+  href: api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.html#Studio23_SS2_SplashScreenSystem_Editor_SplashScreenPageEditor__isInteractable
+  commentId: F:Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor._isInteractable
+  fullName: Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor._isInteractable
+  nameWithType: SplashScreenPageEditor._isInteractable
 - uid: Studio23.SS2.SplashScreenSystem.UI
   name: Studio23.SS2.SplashScreenSystem.UI
   href: api/Studio23.SS2.SplashScreenSystem.UI.html
@@ -313,18 +332,6 @@ references:
   commentId: T:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager
   fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager
   nameWithType: SplashScreenUIManager
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.AcceptBtn
-  name: AcceptBtn
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_AcceptBtn
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.AcceptBtn
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.AcceptBtn
-  nameWithType: SplashScreenUIManager.AcceptBtn
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ButtonPanel
-  name: ButtonPanel
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_ButtonPanel
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ButtonPanel
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ButtonPanel
-  nameWithType: SplashScreenUIManager.ButtonPanel
 - uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.CrossFadeData(System.Single)
   name: CrossFadeData(float)
   href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_CrossFadeData_System_Single_
@@ -341,12 +348,6 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.CrossFadeData
   nameWithType: SplashScreenUIManager.CrossFadeData
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.DeclineBtn
-  name: DeclineBtn
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_DeclineBtn
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.DeclineBtn
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.DeclineBtn
-  nameWithType: SplashScreenUIManager.DeclineBtn
 - uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.DisplayData(Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO)
   name: DisplayData(SplashScreenSO)
   href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_DisplayData_Studio23_SS2_SplashScreenSystem_Data_SplashScreenSO_
@@ -360,57 +361,41 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.DisplayData
   nameWithType: SplashScreenUIManager.DisplayData
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.GridLayout
-  name: GridLayout
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_GridLayout
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.GridLayout
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.GridLayout
-  nameWithType: SplashScreenUIManager.GridLayout
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ImagePrefab
-  name: ImagePrefab
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_ImagePrefab
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ImagePrefab
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ImagePrefab
-  nameWithType: SplashScreenUIManager.ImagePrefab
 - uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.Instance
   name: Instance
   href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_Instance
   commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.Instance
   fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.Instance
   nameWithType: SplashScreenUIManager.Instance
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ParentPanel
-  name: ParentPanel
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_ParentPanel
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ParentPanel
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ParentPanel
-  nameWithType: SplashScreenUIManager.ParentPanel
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.RectParent
-  name: RectParent
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_RectParent
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.RectParent
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.RectParent
-  nameWithType: SplashScreenUIManager.RectParent
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ScrollRect
-  name: ScrollRect
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_ScrollRect
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ScrollRect
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ScrollRect
-  nameWithType: SplashScreenUIManager.ScrollRect
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ScrollRectText
-  name: ScrollRectText
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_ScrollRectText
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ScrollRectText
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.ScrollRectText
-  nameWithType: SplashScreenUIManager.ScrollRectText
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SplashScreenBehaviour
-  name: SplashScreenBehaviour
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SplashScreenBehaviour
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SplashScreenBehaviour
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SplashScreenBehaviour
-  nameWithType: SplashScreenUIManager.SplashScreenBehaviour
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.TitleText
-  name: TitleText
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_TitleText
-  commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.TitleText
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.TitleText
-  nameWithType: SplashScreenUIManager.TitleText
+- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(System.String,System.String,System.Boolean,FontData,FontData)
+  name: SetupPage(string, string, bool, FontData, FontData)
+  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SetupPage_System_String_System_String_System_Boolean_FontData_FontData_
+  commentId: M:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(System.String,System.String,System.Boolean,FontData,FontData)
+  name.vb: SetupPage(String, String, Boolean, FontData, FontData)
+  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(string, string, bool, FontData, FontData)
+  fullName.vb: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(String, String, Boolean, FontData, FontData)
+  nameWithType: SplashScreenUIManager.SetupPage(string, string, bool, FontData, FontData)
+  nameWithType.vb: SplashScreenUIManager.SetupPage(String, String, Boolean, FontData, FontData)
+- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage*
+  name: SetupPage
+  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SetupPage_
+  commentId: Overload:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage
+  isSpec: "True"
+  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage
+  nameWithType: SplashScreenUIManager.SetupPage
+- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupThirdPartyPage(System.Collections.Generic.List{Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry})
+  name: SetupThirdPartyPage(List<ThirdPartyDataEntry>)
+  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SetupThirdPartyPage_System_Collections_Generic_List_Studio23_SS2_SplashScreenSystem_Data_ThirdPartyDataEntry__
+  commentId: M:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupThirdPartyPage(System.Collections.Generic.List{Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry})
+  name.vb: SetupThirdPartyPage(List(Of ThirdPartyDataEntry))
+  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupThirdPartyPage(System.Collections.Generic.List<Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry>)
+  fullName.vb: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupThirdPartyPage(System.Collections.Generic.List(Of Studio23.SS2.SplashScreenSystem.Data.ThirdPartyDataEntry))
+  nameWithType: SplashScreenUIManager.SetupThirdPartyPage(List<ThirdPartyDataEntry>)
+  nameWithType.vb: SplashScreenUIManager.SetupThirdPartyPage(List(Of ThirdPartyDataEntry))
+- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupThirdPartyPage*
+  name: SetupThirdPartyPage
+  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SetupThirdPartyPage_
+  commentId: Overload:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupThirdPartyPage
+  isSpec: "True"
+  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupThirdPartyPage
+  nameWithType: SplashScreenUIManager.SetupThirdPartyPage

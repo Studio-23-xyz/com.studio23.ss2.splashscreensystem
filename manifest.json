@@ -25,6 +25,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.SplashScreenThirdPartyPageEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SplashScreenThirdPartyPageEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.yml",
       "output": {
         ".html": {
@@ -39,16 +49,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.SplashScreenSystem.Core.UnityEventWithBool.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Studio23.SS2.SplashScreenSystem.Core.UnityEventWithBool.html"
         }
       },
       "version": ""
@@ -125,10 +125,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.yml",
+      "source_relative_path": "api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenEditor.html"
+          "relative_path": "api/Studio23.SS2.SplashScreenSystem.Editor.SplashScreenPageEditor.html"
         }
       },
       "version": ""
@@ -177,11 +177,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -200,11 +200,11 @@
       "type": "Toc",
       "source_relative_path": "changelog/toc.md",
       "output": {
-        ".json": {
-          "relative_path": "changelog/toc.json"
-        },
         ".html": {
           "relative_path": "changelog/toc.html"
+        },
+        ".json": {
+          "relative_path": "changelog/toc.json"
         }
       },
       "version": ""
@@ -233,11 +233,11 @@
       "type": "Toc",
       "source_relative_path": "license/toc.md",
       "output": {
-        ".json": {
-          "relative_path": "license/toc.json"
-        },
         ".html": {
           "relative_path": "license/toc.html"
+        },
+        ".json": {
+          "relative_path": "license/toc.json"
         }
       },
       "version": ""
@@ -256,11 +256,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""

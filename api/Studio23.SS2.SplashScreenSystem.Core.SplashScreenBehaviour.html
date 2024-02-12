@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class SplashScreenBehaviour
- |  |  </title>
+      <title>Class SplashScreenBehaviour |  |  </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class SplashScreenBehaviour
- |  |  ">
+      <meta name="title" content="Class SplashScreenBehaviour |  |  ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -91,8 +89,7 @@
 
 
   <h1 id="Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour" data-uid="Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour" class="text-break">
-    Class SplashScreenBehaviour
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.splashscreensystem/blob/main/Assets/Packages/com.studio23.ss2.splashscreensystem/Runtime/Core/SplashScreenBehaviour.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class SplashScreenBehaviour  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.splashscreensystem/blob/main/Assets/Packages/com.studio23.ss2.splashscreensystem/Runtime/Core/SplashScreenBehaviour.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,7 +101,8 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SplashScreenBehaviour : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class SplashScreenBehaviour : MonoBehaviour</code></pre>
   </div>
 
 
@@ -131,8 +129,8 @@
 
 
 
-  <h3 id="Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_OnEULAResponse" data-uid="Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnEULAResponse">
-  OnEULAResponse
+  <h3 id="Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_OnPageResponse" data-uid="Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnPageResponse">
+  OnPageResponse
   <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.splashscreensystem/blob/main/Assets/Packages/com.studio23.ss2.splashscreensystem/Runtime/Core/SplashScreenBehaviour.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -140,7 +138,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityEventWithBool OnEULAResponse</code></pre>
+    <pre><code class="lang-csharp hljs">public UnityEvent&lt;bool&gt; OnPageResponse</code></pre>
   </div>
 
 
@@ -148,7 +146,7 @@
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Studio23.SS2.SplashScreenSystem.Core.UnityEventWithBool.html">UnityEventWithBool</a></dt>
+    <dt><span class="xref">UnityEvent</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -190,36 +188,6 @@
 
 
 
-
-  <h3 id="Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_SplashScreens" data-uid="Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SplashScreens">
-  SplashScreens
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.splashscreensystem/blob/main/Assets/Packages/com.studio23.ss2.splashscreensystem/Runtime/Core/SplashScreenBehaviour.cs/#L14"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SplashScreenData[] SplashScreens</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Studio23.SS2.SplashScreenSystem.Data.SplashScreenData.html">SplashScreenData</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -228,7 +196,7 @@
 
   <h3 id="Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_CrossFadeScreen_System_Single_" data-uid="Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.CrossFadeScreen(System.Single)">
   CrossFadeScreen(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.splashscreensystem/blob/main/Assets/Packages/com.studio23.ss2.splashscreensystem/Runtime/Core/SplashScreenBehaviour.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.splashscreensystem/blob/main/Assets/Packages/com.studio23.ss2.splashscreensystem/Runtime/Core/SplashScreenBehaviour.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -259,7 +227,7 @@
 
   <h3 id="Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_OnSubmit_System_Boolean_" data-uid="Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnSubmit(System.Boolean)">
   OnSubmit(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.splashscreensystem/blob/main/Assets/Packages/com.studio23.ss2.splashscreensystem/Runtime/Core/SplashScreenBehaviour.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.splashscreensystem/blob/main/Assets/Packages/com.studio23.ss2.splashscreensystem/Runtime/Core/SplashScreenBehaviour.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
