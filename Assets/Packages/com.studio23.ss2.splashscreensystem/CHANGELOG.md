@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.0.3] - 2024-01-30
+
+- Code Refectoring
+
 ## [v1.0.2] - 2024-01-17
 
 ### Patch
@@ -16,7 +20,6 @@
 ### Patches
 
 - Updated prefabs
-
 
 ## [v1.0.0] - 2024-01-09
 

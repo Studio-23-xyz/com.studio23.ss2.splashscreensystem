@@ -1,6 +1,4 @@
-
 using TMPro;
-
 
 [System.Serializable]
 public class FontData

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -401,6 +401,10 @@ PrefabInstance:
       value: Splash Screen Manager
       objectReference: {fileID: 0}
     - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
       propertyPath: SplashScreens.Array.data[0].Data
       value: 
       objectReference: {fileID: 11400000, guid: baf8bfcbde063a840b1a959b2a0a402e, type: 2}
@@ -412,6 +416,54 @@ PrefabInstance:
       propertyPath: SplashScreens.Array.data[2].Data
       value: 
       objectReference: {fileID: 11400000, guid: d73cb80a88bc256439527acf8b7f7c42, type: 2}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[0].Data
+      value: 
+      objectReference: {fileID: 11400000, guid: bf642ff771043d646a8c28c3eb151cc8, type: 2}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[1].Data
+      value: 
+      objectReference: {fileID: 11400000, guid: b0340237aeb0ee44c801c6b29d02f1c0, type: 2}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[2].Data
+      value: 
+      objectReference: {fileID: 11400000, guid: d52a27fa08e5a2742aa6c4abdcd72d1a, type: 2}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[3].Data
+      value: 
+      objectReference: {fileID: 11400000, guid: baf8bfcbde063a840b1a959b2a0a402e, type: 2}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[0].Duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[1].Duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[2].Duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[3].Duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[0].FadeDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[1].FadeDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[2].FadeDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085271514212101066, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
+      propertyPath: _splashScreens.Array.data[3].FadeDuration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8109277312914640060, guid: 99128094198371148b9bbd3372d05b3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -571,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4436672005818729940, guid: df6873ba00fccca47955a5849172130d, type: 3}
       propertyPath: m_Alpha
-      value: 0.71222836
+      value: 0.20273069
       objectReference: {fileID: 0}
     - target: {fileID: 6727476269005480479, guid: df6873ba00fccca47955a5849172130d, type: 3}
       propertyPath: m_AnchorMax.y
