@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using Studio23.SS2.SplashScreenSystem.Core;
 using Studio23.SS2.SplashScreenSystem.Data;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,6 +26,15 @@ namespace Studio23.SS2.SplashScreenSystem.UI
         [SerializeField] private GridLayoutGroup GridLayout;
         [SerializeField] private Button AcceptBtn;
         [SerializeField] private Button DeclineBtn;
+
+        private CancellationTokenSource _cancelCrossFade;
+
+        private void OnDisable()
+        {
+            if(_cancelCrossFade!=null)
+                _cancelCrossFade?.Cancel();
+
+        }
 
         private void Awake()
         {
@@ -78,6 +88,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
             ScrollRectText = ScrollRect.GetComponentInChildren<TextMeshProUGUI>();
             _parentCanvasGroup = ParentPanel.GetComponent<CanvasGroup>();
             GridLayout = RectParent.GetComponent<GridLayoutGroup>();
+            _cancelCrossFade = new CancellationTokenSource();
         }
 
         public async void CrossFadeData(float duration)
@@ -89,7 +100,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
                 val += Time.deltaTime;
                 var ratio = val / duration;
                 _parentCanvasGroup.alpha = ratio;
-                await UniTask.Yield();
+                await UniTask.Yield(cancellationToken:_cancelCrossFade.Token,cancelImmediately:true).SuppressCancellationThrow();
             }
         }
 
