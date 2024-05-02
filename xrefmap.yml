@@ -208,6 +208,31 @@ references:
   commentId: F:Studio23.SS2.SplashScreenSystem.Data.SplashScreenData.FadeDuration
   fullName: Studio23.SS2.SplashScreenSystem.Data.SplashScreenData.FadeDuration
   nameWithType: SplashScreenData.FadeDuration
+- uid: Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData
+  name: SplashScreenPrefabData
+  href: api/Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.html
+  commentId: T:Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData
+  fullName: Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData
+  nameWithType: SplashScreenPrefabData
+- uid: Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.PrefabGameObject
+  name: PrefabGameObject
+  href: api/Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.html#Studio23_SS2_SplashScreenSystem_Data_SplashScreenPrefabData_PrefabGameObject
+  commentId: F:Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.PrefabGameObject
+  fullName: Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.PrefabGameObject
+  nameWithType: SplashScreenPrefabData.PrefabGameObject
+- uid: Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.UpdateAndShowSplashContainer(Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager)
+  name: UpdateAndShowSplashContainer(SplashScreenUIManager)
+  href: api/Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.html#Studio23_SS2_SplashScreenSystem_Data_SplashScreenPrefabData_UpdateAndShowSplashContainer_Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_
+  commentId: M:Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.UpdateAndShowSplashContainer(Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager)
+  fullName: Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.UpdateAndShowSplashContainer(Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager)
+  nameWithType: SplashScreenPrefabData.UpdateAndShowSplashContainer(SplashScreenUIManager)
+- uid: Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.UpdateAndShowSplashContainer*
+  name: UpdateAndShowSplashContainer
+  href: api/Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.html#Studio23_SS2_SplashScreenSystem_Data_SplashScreenPrefabData_UpdateAndShowSplashContainer_
+  commentId: Overload:Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.UpdateAndShowSplashContainer
+  isSpec: "True"
+  fullName: Studio23.SS2.SplashScreenSystem.Data.SplashScreenPrefabData.UpdateAndShowSplashContainer
+  nameWithType: SplashScreenPrefabData.UpdateAndShowSplashContainer
 - uid: Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO
   name: SplashScreenSO
   href: api/Studio23.SS2.SplashScreenSystem.Data.SplashScreenSO.html
@@ -367,6 +392,19 @@ references:
   commentId: F:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.Instance
   fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.Instance
   nameWithType: SplashScreenUIManager.Instance
+- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetUpPrefabGameObject(GameObject)
+  name: SetUpPrefabGameObject(GameObject)
+  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SetUpPrefabGameObject_GameObject_
+  commentId: M:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetUpPrefabGameObject(GameObject)
+  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetUpPrefabGameObject(GameObject)
+  nameWithType: SplashScreenUIManager.SetUpPrefabGameObject(GameObject)
+- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetUpPrefabGameObject*
+  name: SetUpPrefabGameObject
+  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SetUpPrefabGameObject_
+  commentId: Overload:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetUpPrefabGameObject
+  isSpec: "True"
+  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetUpPrefabGameObject
+  nameWithType: SplashScreenUIManager.SetUpPrefabGameObject
 - uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(System.String,System.String,System.Boolean,FontData,FontData)
   name: SetupPage(string, string, bool, FontData, FontData)
   href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SetupPage_System_String_System_String_System_Boolean_FontData_FontData_
