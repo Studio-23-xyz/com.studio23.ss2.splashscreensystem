@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.0.4] - 2024-01-30
+
+- Added new page type (prefab) for splash screen
+
 ## [v1.0.3] - 2024-01-30
 
 - Code Refectoring

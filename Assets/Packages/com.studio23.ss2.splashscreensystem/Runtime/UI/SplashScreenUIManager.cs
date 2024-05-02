@@ -20,6 +20,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
         [SerializeField] private TextMeshProUGUI TitleText;
         [SerializeField] private GameObject ScrollRect;
         [SerializeField] private Transform RectParent;
+        [SerializeField] private Transform PrefabParent;
         [SerializeField] private Image ImagePrefab;
         [SerializeField] private SplashScreenBehaviour SplashScreenBehaviour;
         [SerializeField] private TextMeshProUGUI ScrollRectText;
@@ -81,6 +82,24 @@ namespace Studio23.SS2.SplashScreenSystem.UI
             ButtonPanel.SetActive(false);
             ScrollRect.gameObject.SetActive(false);
             RectParent.gameObject.SetActive(true);
+        }
+
+        public void SetUpPrefabGameObject(GameObject prefab)
+        {
+            ScrollRect.gameObject.SetActive(false);
+            RectParent.gameObject.SetActive(false);
+            PrefabParent.gameObject.SetActive(true);
+            ClearChild();
+            Instantiate(prefab, PrefabParent);
+        }
+
+
+        private void ClearChild()
+        {
+            foreach (Transform child in PrefabParent)
+            {
+                Destroy(child.gameObject);
+            }
         }
 
         private void Initialize()
