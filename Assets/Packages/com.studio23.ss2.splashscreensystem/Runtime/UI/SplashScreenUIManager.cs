@@ -60,14 +60,14 @@ namespace Studio23.SS2.SplashScreenSystem.UI
             ButtonPanel.SetActive(showButton);
             AcceptBtn.onClick.RemoveAllListeners();
             DeclineBtn.onClick.RemoveAllListeners();
-            AcceptBtn.onClick.AddListener(() =>
-            {
-                SplashScreenBehaviour.OnSubmit(true);
-            });
-            DeclineBtn.onClick.AddListener(() =>
-            {
-                SplashScreenBehaviour.OnSubmit(false);
-            });
+            //AcceptBtn.onClick.AddListener(() =>
+            //{
+            //    SplashScreenBehaviour.OnSubmit(true);
+            //});
+            //DeclineBtn.onClick.AddListener(() =>
+            //{
+            //    SplashScreenBehaviour.OnSubmit(false);
+            //});
         }
 
         public void SetupThirdPartyPage(List<ThirdPartyDataEntry> thirdPartyEntries)
@@ -110,7 +110,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
             _cancelCrossFade = new CancellationTokenSource();
         }
 
-        public async void CrossFadeData(float duration)
+        public async UniTask CrossFadeData(float duration)
         {
             float val = 0.0f;
             _parentCanvasGroup.alpha = val;
