@@ -85,22 +85,6 @@ references:
   commentId: T:Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour
   fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour
   nameWithType: SplashScreenBehaviour
-- uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.CrossFadeScreen(System.Single)
-  name: CrossFadeScreen(float)
-  href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_CrossFadeScreen_System_Single_
-  commentId: M:Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.CrossFadeScreen(System.Single)
-  name.vb: CrossFadeScreen(Single)
-  fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.CrossFadeScreen(float)
-  fullName.vb: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.CrossFadeScreen(Single)
-  nameWithType: SplashScreenBehaviour.CrossFadeScreen(float)
-  nameWithType.vb: SplashScreenBehaviour.CrossFadeScreen(Single)
-- uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.CrossFadeScreen*
-  name: CrossFadeScreen
-  href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_CrossFadeScreen_
-  commentId: Overload:Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.CrossFadeScreen
-  isSpec: "True"
-  fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.CrossFadeScreen
-  nameWithType: SplashScreenBehaviour.CrossFadeScreen
 - uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnPageResponse
   name: OnPageResponse
   href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_OnPageResponse
@@ -129,6 +113,32 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.OnSubmit
   nameWithType: SplashScreenBehaviour.OnSubmit
+- uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipAll
+  name: SetSkipAll()
+  href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_SetSkipAll
+  commentId: M:Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipAll
+  fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipAll()
+  nameWithType: SplashScreenBehaviour.SetSkipAll()
+- uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipAll*
+  name: SetSkipAll
+  href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_SetSkipAll_
+  commentId: Overload:Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipAll
+  isSpec: "True"
+  fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipAll
+  nameWithType: SplashScreenBehaviour.SetSkipAll
+- uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipSingle
+  name: SetSkipSingle()
+  href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_SetSkipSingle
+  commentId: M:Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipSingle
+  fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipSingle()
+  nameWithType: SplashScreenBehaviour.SetSkipSingle()
+- uid: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipSingle*
+  name: SetSkipSingle
+  href: api/Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.html#Studio23_SS2_SplashScreenSystem_Core_SplashScreenBehaviour_SetSkipSingle_
+  commentId: Overload:Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipSingle
+  isSpec: "True"
+  fullName: Studio23.SS2.SplashScreenSystem.Core.SplashScreenBehaviour.SetSkipSingle
+  nameWithType: SplashScreenBehaviour.SetSkipSingle
 - uid: Studio23.SS2.SplashScreenSystem.Data
   name: Studio23.SS2.SplashScreenSystem.Data
   href: api/Studio23.SS2.SplashScreenSystem.Data.html
