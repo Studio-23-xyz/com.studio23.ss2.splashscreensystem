@@ -19,44 +19,62 @@ namespace Studio23.SS2.SplashScreenSystem.Core
         private CancellationTokenSource _cancelSplashScreen;
 
 
-
-        private void OnEnable()
-        {
-            _cancelSplashScreen = new CancellationTokenSource();
-        }
-
-        private void OnDisable()
-        {
-            _cancelSplashScreen?.Cancel();
-            _cancelSplashScreen?.Dispose();
-        }
-
-
         private void Start()
         {
+            OnSplashScreenCompleted.AddListener(CancelAsyncToken);
+            InitializeAsyncToken();
             ShowSplashScreen();
         }
+
+        private void OnDestroy()
+        {
+            OnSplashScreenCompleted.RemoveListener(CancelAsyncToken);
+        }
+
+
         private async void ShowSplashScreen()
         {
             foreach (var splash in _splashScreens)
             {
                 _pageButtonClicked = false;
                 SplashScreenData currentSplash = splash;
-                if (currentSplash.Data != null)
-                    SplashScreenUIManager.Instance.DisplayData(currentSplash.Data);
-                CrossFadeScreen(currentSplash.FadeDuration);
+                if (currentSplash.Data == null) continue;
+                SplashScreenUIManager.Instance.DisplayData(currentSplash.Data);
+                await SplashScreenUIManager.Instance.CrossFadeData(currentSplash.FadeDuration).AttachExternalCancellation(_cancelSplashScreen.Token).SuppressCancellationThrow();
                 if (!currentSplash.Data.IsInteractable)
                     await UniTask.Delay(TimeSpan.FromSeconds(currentSplash.Duration), cancellationToken: _cancelSplashScreen.Token, cancelImmediately: true).SuppressCancellationThrow();
                 else
                     await UniTask.WaitUntil(() => _pageButtonClicked, cancellationToken: _cancelSplashScreen.Token, cancelImmediately: true).SuppressCancellationThrow();
+
+                await UniTask.WaitForFixedUpdate();
             }
             
             OnSplashScreenCompleted?.Invoke();
         }
-        public void CrossFadeScreen(float duration)
+
+
+        public void SetSkipAll()
         {
-            SplashScreenUIManager.Instance.CrossFadeData(duration);
+            CancelAsyncToken();
         }
+
+        public void SetSkipSingle()
+        {
+            CancelAsyncToken();
+            InitializeAsyncToken();
+        }
+
+        private void InitializeAsyncToken()
+        {
+            _cancelSplashScreen = new CancellationTokenSource();
+        }
+
+
+        private void CancelAsyncToken()
+        {
+            _cancelSplashScreen?.Cancel();
+        }
+
         public bool OnSubmit(bool status)
         {
             OnPageResponse?.Invoke(status);
