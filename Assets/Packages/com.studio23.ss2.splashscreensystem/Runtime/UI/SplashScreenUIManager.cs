@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Threading;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 
 
@@ -13,17 +15,16 @@ namespace Studio23.SS2.SplashScreenSystem.UI
     public class SplashScreenUIManager : MonoBehaviour
     {
         public static SplashScreenUIManager Instance;
-
         private CanvasGroup _parentCanvasGroup;
         [SerializeField] private GameObject ButtonPanel;
         [SerializeField] private GameObject ParentPanel;
-        [SerializeField] private TextMeshProUGUI TitleText;
+        [SerializeField] private GameObject TitleText;
         [SerializeField] private GameObject ScrollRect;
         [SerializeField] private Transform RectParent;
         [SerializeField] private Transform PrefabParent;
         [SerializeField] private Image ImagePrefab;
         [SerializeField] private SplashScreenBehaviour SplashScreenBehaviour;
-        [SerializeField] private TextMeshProUGUI ScrollRectText;
+        [SerializeField] private GameObject ScrollRectText;
         [SerializeField] private GridLayoutGroup GridLayout;
         [SerializeField] private Button AcceptBtn;
         [SerializeField] private Button DeclineBtn;
@@ -47,12 +48,12 @@ namespace Studio23.SS2.SplashScreenSystem.UI
             Initialize();
         }
 
-        public void SetupPage(string titleText, string descriptionText, bool showButton, FontData titleFontData, FontData descriptionFontData)
+        public void SetupPage(LocalizedString titleText, LocalizedString descriptionText, bool showButton, FontData titleFontData, FontData descriptionFontData)
         {
-            if (titleFontData != null) titleFontData.UpdateFontDataToText(TitleText);
-            if (descriptionFontData != null) descriptionFontData.UpdateFontDataToText(ScrollRectText);
-            TitleText.text = titleText;
-            ScrollRectText.text = descriptionText;
+            //if (titleFontData != null) titleFontData.UpdateFontDataToText(TitleText);
+            //if (descriptionFontData != null) descriptionFontData.UpdateFontDataToText(ScrollRectText);
+            TitleText.GetComponent<LocalizeStringEvent>().StringReference = titleText;
+            ScrollRectText.GetComponent<LocalizeStringEvent>().StringReference = descriptionText;
             TitleText.gameObject.SetActive(true);
             ScrollRect.gameObject.SetActive(true);
             RectParent.gameObject.SetActive(false);
@@ -104,7 +105,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
 
         private void Initialize()
         {
-            ScrollRectText = ScrollRect.GetComponentInChildren<TextMeshProUGUI>();
+            //ScrollRectText = ScrollRect.GetComponentInChildren<TextMeshProUGUI>();
             _parentCanvasGroup = ParentPanel.GetComponent<CanvasGroup>();
             GridLayout = RectParent.GetComponent<GridLayoutGroup>();
             _cancelCrossFade = new CancellationTokenSource();

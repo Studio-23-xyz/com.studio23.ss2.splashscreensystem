@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.0.6] - 2024-05-14
+
+- Added localization support
+
 ## [v1.0.5] - 2024-05-14
 
 - Added skip functionality for splash screen

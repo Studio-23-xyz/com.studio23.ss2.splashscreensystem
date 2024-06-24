@@ -81,8 +81,8 @@ namespace Studio23.SS2.SplashScreenSystem.Editor
 
             // Create and save Disclaimer data
             var pageData = ScriptableObject.CreateInstance<ScreenTextData>();
-            pageData.Title = _pageTitle;
-            pageData.Description = _pageDescription;
+            //pageData.Title = _pageTitle;
+            //pageData.Description = _pageDescription;
             pageData.TitleFontData = new FontData(_pageTitleFontSettings);
             pageData.DescriptionFontData = new FontData(_pageDescriptionFontSettings);
             pageData.IsInteractable = _isInteractable;
