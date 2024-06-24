@@ -415,15 +415,15 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetUpPrefabGameObject
   nameWithType: SplashScreenUIManager.SetUpPrefabGameObject
-- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(System.String,System.String,System.Boolean,FontData,FontData)
-  name: SetupPage(string, string, bool, FontData, FontData)
-  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SetupPage_System_String_System_String_System_Boolean_FontData_FontData_
-  commentId: M:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(System.String,System.String,System.Boolean,FontData,FontData)
-  name.vb: SetupPage(String, String, Boolean, FontData, FontData)
-  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(string, string, bool, FontData, FontData)
-  fullName.vb: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(String, String, Boolean, FontData, FontData)
-  nameWithType: SplashScreenUIManager.SetupPage(string, string, bool, FontData, FontData)
-  nameWithType.vb: SplashScreenUIManager.SetupPage(String, String, Boolean, FontData, FontData)
+- uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(LocalizedString,LocalizedString,System.Boolean,FontData,FontData)
+  name: SetupPage(LocalizedString, LocalizedString, bool, FontData, FontData)
+  href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SetupPage_LocalizedString_LocalizedString_System_Boolean_FontData_FontData_
+  commentId: M:Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(LocalizedString,LocalizedString,System.Boolean,FontData,FontData)
+  name.vb: SetupPage(LocalizedString, LocalizedString, Boolean, FontData, FontData)
+  fullName: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(LocalizedString, LocalizedString, bool, FontData, FontData)
+  fullName.vb: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage(LocalizedString, LocalizedString, Boolean, FontData, FontData)
+  nameWithType: SplashScreenUIManager.SetupPage(LocalizedString, LocalizedString, bool, FontData, FontData)
+  nameWithType.vb: SplashScreenUIManager.SetupPage(LocalizedString, LocalizedString, Boolean, FontData, FontData)
 - uid: Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.SetupPage*
   name: SetupPage
   href: api/Studio23.SS2.SplashScreenSystem.UI.SplashScreenUIManager.html#Studio23_SS2_SplashScreenSystem_UI_SplashScreenUIManager_SetupPage_
