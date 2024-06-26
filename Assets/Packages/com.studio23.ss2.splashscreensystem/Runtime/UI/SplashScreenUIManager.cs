@@ -87,6 +87,7 @@ namespace Studio23.SS2.SplashScreenSystem.UI
 
         public void SetUpPrefabGameObject(GameObject prefab)
         {
+            TitleText.gameObject.SetActive(false);
             ScrollRect.gameObject.SetActive(false);
             RectParent.gameObject.SetActive(false);
             PrefabParent.gameObject.SetActive(true);

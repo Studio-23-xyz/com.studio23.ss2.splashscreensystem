@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 7952649889091292397}
   - component: {fileID: 7769126137971522710}
   - component: {fileID: 5855224897234448292}
+  - component: {fileID: 296151087720462833}
   m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
@@ -198,6 +199,34 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &296151087720462833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198431408627450537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1050772001147252150
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +383,81 @@ MonoBehaviour:
   m_Spacing: {x: 100, y: 70}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!1 &3474062728224295220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9141229072591054515}
+  - component: {fileID: 4628280052017915765}
+  - component: {fileID: 1879438962145788104}
+  m_Layer: 5
+  m_Name: PrefabParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9141229072591054515
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474062728224295220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7895447582648113995}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4628280052017915765
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474062728224295220}
+  m_CullTransparentMesh: 1
+--- !u!114 &1879438962145788104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474062728224295220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4506748312010589992
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +754,7 @@ RectTransform:
   - {fileID: 3368719359375327599}
   - {fileID: 2794313721046771526}
   - {fileID: 2232684555868859345}
+  - {fileID: 9141229072591054515}
   m_Father: {fileID: 3385407907572982298}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1129,6 +1234,7 @@ GameObject:
   - component: {fileID: 5631648472800288269}
   - component: {fileID: 8801756368562174537}
   - component: {fileID: 6947135013250352586}
+  - component: {fileID: 7926377843266127911}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1272,6 +1378,34 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &7926377843266127911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500987172635268311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &8054604771417177919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,8 +1526,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6584339617120617596}
   m_HandleRect: {fileID: 3580588924190697224}
   m_Direction: 2
-  m_Value: 1.0000005
-  m_Size: 0.60403484
+  m_Value: 1.0000002
+  m_Size: 0.5368905
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1591,12 +1725,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonPanel: {fileID: 28526371765590078}
   ParentPanel: {fileID: 5754884554190566271}
-  TitleText: {fileID: 8801756368562174537}
+  TitleText: {fileID: 7500987172635268311}
   ScrollRect: {fileID: 7308742628658633764}
   RectParent: {fileID: 2232684555868859345}
-  ImagePrefab: {fileID: 6679128746867531280, guid: cfb0962c1f239ed42abbde68a6a53685, type: 3}
+  PrefabParent: {fileID: 9141229072591054515}
+  ImagePrefab: {fileID: 6679128746867531280, guid: 97dd1147b1ee00247907171a8db34e16, type: 3}
   SplashScreenBehaviour: {fileID: 0}
-  ScrollRectText: {fileID: 0}
+  ScrollRectText: {fileID: 198431408627450537}
   GridLayout: {fileID: 0}
   AcceptBtn: {fileID: 8142110520872648263}
   DeclineBtn: {fileID: 8636337206561465314}

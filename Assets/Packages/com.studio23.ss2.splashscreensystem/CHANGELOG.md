@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.0.7] - 2024-06-26
+
+- Fixed Demo scene and Prefab View now properly hides header text
+
 ## [v1.0.6] - 2024-05-14
 
 - Added localization support

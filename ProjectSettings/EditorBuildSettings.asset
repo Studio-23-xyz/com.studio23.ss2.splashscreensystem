@@ -11,4 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Simple SplashScreen/Scenes/GameExempleScene.unity
     guid: 117799e27edd8bf4494a6b5d30d68d87
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 7ca1b566e6e9772449cbe20a295e5740, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 53fa135a5cd58674483cdf932fa166f7, type: 2}
